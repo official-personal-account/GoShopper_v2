@@ -1,5 +1,6 @@
 import asyncHandler from "../middleware/asyncHandler.js";
 import User from "../models/userModel.js";
+import jwt from "jsonwebtoken";
 
 // NOTE:
 // @desc            Authenticate user & get token
@@ -7,7 +8,34 @@ import User from "../models/userModel.js";
 // @access          Public
 // asyncHandler:    allows us to avoid using try/catch block for async functions (async functions returns a promise).
 const authUser = asyncHandler(async (req, res) => {
-  res.send("auth user");
+  const { email, password } = req.body;
+
+  const user = await User.findOne({ email });
+
+  // Because "user" is tied to the "User" model, the plain text password is passed on to the "matchPassword" method, as the "enteredPassword".
+  if (user && (await user.matchPassword(password))) {
+    const token = jwt.sign({ userID: user._id }, process.env.JWT_SECRET, {
+      expiresIn: "30d", // change to 1 day in production. Apply same to cookie maxAge
+    });
+
+    // Set JWT as HTTP-Only cookie
+    res.cookie("jwt", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV !== "development",
+      sameSiite: true,
+      maxAge: 60 * 24 * 60 * 60 * 1000, // 30 days.
+    });
+
+    res.json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      isAdmin: user.isAdmin,
+    });
+  } else {
+    res.status(401);
+    throw new Error("Invalid email or password");
+  }
 });
 
 // NOTE:

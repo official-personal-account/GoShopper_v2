@@ -12,6 +12,10 @@ connectDB(); // Note: connects to MongoDB from {import connectDB from "./config/
 
 const app = express();
 
+// Body parser middleware
+app.use(express.json()); // Note: parses data (e.g. form data) in json payload (format)
+app.use(express.urlencoded({ extended: true })); // Note: encodes data in a format that is accepted or readable under http protocol, before sending over http
+
 app.get("/", function (req, res) {
   res.send("API is running...");
 });
