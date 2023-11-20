@@ -10,11 +10,13 @@ import jwt from "jsonwebtoken";
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
+  console.log(req.body);
+
   const user = await User.findOne({ email });
 
   // Because "user" is tied to the "User" model, the plain text password is passed on to the "matchPassword" method, as the "enteredPassword".
   if (user && (await user.matchPassword(password))) {
-    const token = jwt.sign({ userID: user._id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
       expiresIn: "30d", // change to 1 day in production. Apply same to cookie maxAge
     });
 
@@ -23,7 +25,7 @@ const authUser = asyncHandler(async (req, res) => {
       httpOnly: true,
       secure: process.env.NODE_ENV !== "development",
       sameSiite: true,
-      maxAge: 60 * 24 * 60 * 60 * 1000, // 30 days.
+      maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days.
     });
 
     res.json({

@@ -10,6 +10,7 @@ import {
   getUserById,
   updateUser,
 } from "../controllers/userController.js";
+import { protect, admin } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
@@ -18,10 +19,17 @@ const router = express.Router();
 // Note: router.route is an express router method, used in place of app.get or app.post.
 // Note: "/api/users" is prefixed to all "/" routes in this file, to determine the route to be opened, and response to serve.
 
-router.route("/").post(registerUser).get(getUsers);
+router.route("/").post(registerUser).get(protect, admin, getUsers);
 router.post("/logout", logoutUser);
-router.post("/login", authUser);
-router.route("/profile").get(getUserProfile).put(updateUserProfile);
-router.route("/:id").delete(deleteUser).get(getUserById).put(updateUser);
+router.post("/auth", authUser);
+router
+  .route("/profile")
+  .get(protect, getUserProfile)
+  .put(protect, updateUserProfile);
+router
+  .route("/:id")
+  .delete(protect, admin, deleteUser)
+  .get(protect, admin, getUserById)
+  .put(protect, admin, updateUser);
 
 export default router;
