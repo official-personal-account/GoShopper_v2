@@ -15,8 +15,8 @@ const protect = asyncHandler(async (req, res, next) => {
       //   because user has been tied to req (req.user), the user would be identifiable all all routes, when the user makes a request call, and we wcan also access the user from the req, from anywhere the req is used.
       req.user = await User.findById(decoded.userId).select("-password");
       next();
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
       res.status(401);
       throw new Error("Not authorized, token failed");
     }

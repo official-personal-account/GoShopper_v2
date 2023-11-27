@@ -10,8 +10,6 @@ import generateToken from "../utils/generateToken.js";
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
-  console.log(req.body);
-
   const user = await User.findOne({ email });
 
   // Note: Because "user" is tied to the "User" model, the plain text password is passed on to the "matchPassword" method, as the "enteredPassword".
@@ -84,7 +82,6 @@ const logoutUser = asyncHandler(async (req, res) => {
 // @route           GET /api/users/profile
 // @access          Private
 const getUserProfile = asyncHandler(async (req, res) => {
-  // console.log(req);
   const user = await User.findById(req.user._id);
 
   if (user) {

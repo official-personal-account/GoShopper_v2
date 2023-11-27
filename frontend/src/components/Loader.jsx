@@ -10,6 +10,9 @@ const Loader = () => {
         // height: "100px",
         margin: "auto",
         display: "in-line",
+        // position: "absolute",
+        // top: "50%",
+        // right: "50%",
       }}
     />
   );
