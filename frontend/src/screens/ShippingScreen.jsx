@@ -34,7 +34,7 @@ const ShippingScreen = () => {
   return (
     <FormContainer>
       <CheckoutSteps step1 step2 />
-      <h1>Shipping Address</h1>
+      <h1>Shipping/Delivery Address</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="address" className="my-3">
           <Form.Label>Address</Form.Label>
@@ -85,7 +85,10 @@ const ShippingScreen = () => {
             onChange={(event) => setPhoneNumber(event.target.value)}
           ></Form.Control>
           <p style={{ color: "red", fontSize: "small" }}>
-            Phone number should include country code - e.g. +233 xxx xxx xxx
+            <strong>
+              Include country code if living outside Ghana - e.g. +234 xx xxxx
+              xxx
+            </strong>
           </p>
         </Form.Group>
 

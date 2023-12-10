@@ -48,10 +48,10 @@ const CartScreen = () => {
             {cartItems.map((item) => (
               <ListGroup.Item key={item._id}>
                 <Row>
-                  <Col xs={3} md={2}>
+                  <Col xs={2} md={2}>
                     <Image src={item.image} alt={item.name} fluid rounded />
                   </Col>
-                  <Col xs={2} md={4}>
+                  <Col xs={3} md={4}>
                     <Link to={`/product/${item._id}`}>
                       {item.name.substring(0, 15)}
                     </Link>
