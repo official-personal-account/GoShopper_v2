@@ -11,6 +11,7 @@ import { toast } from "react-toastify";
 const RegisterScreen = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [confirmEmail, setConfirmEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -33,8 +34,8 @@ const RegisterScreen = () => {
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    if (password !== confirmPassword) {
-      toast.error("Passwords or do not match");
+    if (password !== confirmPassword || email !== confirmEmail) {
+      toast.error("Passwords or Emails do not match");
       return;
     } else {
       try {
@@ -69,6 +70,16 @@ const RegisterScreen = () => {
             placeholder="Enter Email"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
+          ></Form.Control>
+        </Form.Group>
+
+        <Form.Group controlId="confirmEmail" className="my-3">
+          <Form.Label>Re-enter Email Address</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Re-enter Email"
+            value={confirmEmail}
+            onChange={(event) => setConfirmEmail(event.target.value)}
           ></Form.Control>
         </Form.Group>
 

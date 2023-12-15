@@ -17,7 +17,7 @@ function App() {
         </Container>
       </main>
       <Footer />
-      <ToastContainer position="bottom-center" theme="dark" autoClose={10000} />
+      <ToastContainer position="bottom-right" theme="dark" autoClose={10000} />
     </>
   );
 }
