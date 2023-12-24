@@ -1,14 +1,6 @@
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import {
-  Row,
-  Col,
-  ListGroup,
-  Image,
-  Form,
-  Button,
-  Card,
-} from "react-bootstrap";
+import { Row, Col, ListGroup, Image, Button, Card } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
@@ -18,6 +10,7 @@ import {
   useGetOrderDetailsQuery,
   usePayOrderMutation,
   useGetPayPalClientIdQuery,
+  useDeliverOrderMutation,
 } from "../slices/ordersApiSlice";
 
 const OrderScreen = () => {
@@ -31,6 +24,9 @@ const OrderScreen = () => {
   } = useGetOrderDetailsQuery(orderId);
 
   const [payOrder, { isLoading: loadingPay }] = usePayOrderMutation();
+
+  const [deliverOrder, { isLoading: loadingDeliver }] =
+    useDeliverOrderMutation();
 
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
 
@@ -99,6 +95,16 @@ const OrderScreen = () => {
       });
   }
 
+  const deliverOrderHandler = async () => {
+    try {
+      await deliverOrder(orderId);
+      refetch();
+      toast.success("Order marked as delivered");
+    } catch (err) {
+      toast.error(err?.data?.message || err.message);
+    }
+  };
+
   return isLoading ? (
     <Loader />
   ) : error ? (
@@ -128,8 +134,9 @@ const OrderScreen = () => {
               </p>
               <p>
                 <strong>Address:</strong> {order.shippingAddress.address},{" "}
-                {order.shippingAddress.city}, {order.shippingAddress.postalCode}
-                , {order.shippingAddress.country}
+                {order.shippingAddress.city}, {order.shippingAddress.State},{" "}
+                {order.shippingAddress.postalCode},{" "}
+                {order.shippingAddress.country}
               </p>
               {order.isDelivered ? (
                 <Message variant="success">
@@ -229,6 +236,22 @@ const OrderScreen = () => {
                 </p>
               </ListGroup.Item>
 
+              {/* <ListGroup.Item>
+                <Message variant="info">
+                  <p
+                    style={{
+                      fontSize: "x-small",
+                      textAlign: "center",
+                      marginTop: "10px",
+                      fontWeight: "bold",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Card payment does not require a PayPal account
+                  </p>
+                </Message>
+              </ListGroup.Item> */}
+
               {!order.isPaid && (
                 <ListGroup.Item>
                   {loadingPay && <Loader />}
@@ -245,41 +268,33 @@ const OrderScreen = () => {
                       </Button>
 
                       <div>
-                        {/* <p
-                          style={{
-                            fontSize: "small",
-                            color: "blue",
-                            textAlign: "center",
-                            marginTop: "10px",
-                            border: "1px solid",
-                            borderRadius: "5px",
-                          }}
-                        >
-                          Card payment does not require a PayPal account
-                        </p> */}
-
                         <PayPalButtons
                           createOrder={createOrder}
                           onApprove={onApprove}
                           onError={onError}
                         ></PayPalButtons>
-
-                        {/* <p
-                          style={{
-                            fontSize: "small",
-                            color: "blue",
-                            textAlign: "center",
-                          }}
-                        >
-                          Card payment does not require a PayPal account
-                        </p> */}
                       </div>
                     </div>
                   )}
                 </ListGroup.Item>
               )}
 
-              {/* MARK AS DELIVERED PLACEHOLDER */}
+              {loadingDeliver && <Loader />}
+
+              {userInfo &&
+                userInfo.isAdmin &&
+                order.isPaid &&
+                !order.isDelivered && (
+                  <ListGroup.Item>
+                    <Button
+                      type="button"
+                      className="btn btn-block"
+                      onClick={deliverOrderHandler}
+                    >
+                      Mark As Delivered
+                    </Button>
+                  </ListGroup.Item>
+                )}
             </ListGroup>
           </Card>
         </Col>

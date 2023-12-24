@@ -66,7 +66,7 @@ const ProfileScreen = () => {
           <Form.Group controlId="name" className="my-2">
             <Form.Label>Name</Form.Label>
             <Form.Control
-              type="name"
+              type="text"
               placeholder="Enter Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -155,7 +155,7 @@ const ProfileScreen = () => {
                   </td>
                   <td>
                     {order.isDelivered ? (
-                      order.isDelivered.substring(0, 10)
+                      order.deliveredAt.substring(0, 10)
                     ) : (
                       <FaTimes style={{ color: "red" }} />
                     )}
@@ -163,7 +163,7 @@ const ProfileScreen = () => {
                   <td>
                     <LinkContainer to={`/order/${order._id}`}>
                       <Button className="btn-sm" variant="secondary">
-                        See Details
+                        Details
                       </Button>
                     </LinkContainer>
                   </td>

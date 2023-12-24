@@ -12,6 +12,7 @@ const ShippingScreen = () => {
 
   const [address, setAddress] = useState(shippingAddress?.address || "");
   const [city, setCity] = useState(shippingAddress?.city || "");
+  const [state, setState] = useState(shippingAddress?.state || "");
   const [postalCode, setPostalCode] = useState(
     shippingAddress?.postalCode || ""
   );
@@ -26,7 +27,14 @@ const ShippingScreen = () => {
   const submitHandler = function (event) {
     event.preventDefault();
     dispatch(
-      saveShippingAddress({ address, city, postalCode, country, phoneNumber })
+      saveShippingAddress({
+        address,
+        city,
+        state,
+        postalCode,
+        country,
+        phoneNumber,
+      })
     );
     navigate("/payment");
   };
@@ -43,6 +51,7 @@ const ShippingScreen = () => {
             placeholder="Delivery Address"
             value={address}
             onChange={(event) => setAddress(event.target.value)}
+            required
           ></Form.Control>
         </Form.Group>
 
@@ -53,6 +62,18 @@ const ShippingScreen = () => {
             placeholder="Your City"
             value={city}
             onChange={(event) => setCity(event.target.value)}
+            required
+          ></Form.Control>
+        </Form.Group>
+
+        <Form.Group controlId="state" className="my-3">
+          <Form.Label>State/Region</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Your State/Region"
+            value={state}
+            onChange={(event) => setState(event.target.value)}
+            required
           ></Form.Control>
         </Form.Group>
 
@@ -63,6 +84,7 @@ const ShippingScreen = () => {
             placeholder="Enter Postal Code"
             value={postalCode}
             onChange={(event) => setPostalCode(event.target.value)}
+            required
           ></Form.Control>
         </Form.Group>
 
@@ -73,6 +95,7 @@ const ShippingScreen = () => {
             placeholder="Your Country"
             value={country}
             onChange={(event) => setCountry(event.target.value)}
+            required
           ></Form.Control>
         </Form.Group>
 
@@ -83,6 +106,7 @@ const ShippingScreen = () => {
             placeholder="Your phone number"
             value={phoneNumber}
             onChange={(event) => setPhoneNumber(event.target.value)}
+            required
           ></Form.Control>
           <p style={{ color: "red", fontSize: "small" }}>
             <strong>

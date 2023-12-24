@@ -1,9 +1,9 @@
 import { LinkContainer } from "react-router-bootstrap";
-import { Table, Button, Tab } from "react-bootstrap";
+import { Table, Button } from "react-bootstrap";
 import { FaTimes } from "react-icons/fa";
-import Message from "../components/Message";
-import Loader from "../components/Loader";
-import { useGetOrdersQuery } from "../slices/ordersApiSlice";
+import Message from "../../components/Message";
+import Loader from "../../components/Loader";
+import { useGetOrdersQuery } from "../../slices/ordersApiSlice";
 
 const OrderListScreen = () => {
   const { data: orders, isLoading, error } = useGetOrdersQuery();
@@ -52,7 +52,7 @@ const OrderListScreen = () => {
                 <td>
                   <LinkContainer to={`/order/${order._id}`}>
                     <Button variant="secondary" className="btn-sm">
-                      See Details
+                      Details
                     </Button>
                   </LinkContainer>
                 </td>
