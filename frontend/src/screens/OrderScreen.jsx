@@ -171,13 +171,18 @@ const OrderScreen = () => {
                         alt={orderItem.name}
                         fluid
                         rounded
+                        className="fitObject"
                       />
                     </Col>
 
-                    <Col xs={5} sm={6} md={7} className="product-title">
+                    {/* <Col xs={5} sm={6} md={7} className="product-title">
                       <Link to={`/product/${orderItem.product}`}>
                         {orderItem.name}
                       </Link>
+                    </Col> */}
+
+                    <Col xs={5} sm={6} md={7} className="product-title">
+                      {orderItem.name}
                     </Col>
 
                     <Col xs={4} sm={4} md={4}>

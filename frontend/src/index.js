@@ -11,7 +11,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/styles/bootstrap.custom.css";
-import "./assets/styles/index.css";
+import "./assets/styles/index.css"; // stable csss
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import PrivateRoute from "./components/PrivateRoute";

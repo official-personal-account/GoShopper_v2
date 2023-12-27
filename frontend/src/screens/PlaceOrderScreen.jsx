@@ -85,6 +85,7 @@ const PlaceOrderScreen = () => {
                             alt={item.name}
                             fluid
                             rounded
+                            className="fitObject"
                           />
                         </Col>
 

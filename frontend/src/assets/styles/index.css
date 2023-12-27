@@ -60,3 +60,8 @@ table th {
   font-size: small;
   /* text-decoration: underline; */
 }
+
+.fitObject {
+  aspect-ratio: 5/4;
+  object-fit: contain;
+}
