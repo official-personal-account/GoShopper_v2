@@ -65,7 +65,7 @@ const UserListScreen = () => {
                 <td>{user.createdAt.substring(0, 10)}</td>
 
                 <td>
-                  <LinkContainer to={`admin/user/${user._id}/edit`}>
+                  <LinkContainer to={`/admin/user/${user._id}/edit`}>
                     <Button variant="secondary" className="btn-sm mx-2">
                       <FaEdit />
                     </Button>
