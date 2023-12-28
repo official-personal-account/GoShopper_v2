@@ -1,6 +1,7 @@
 import express from "express";
 import {
   createProduct,
+  deleteProduct,
   getProducts,
   getProductsById,
   updateProduct,
@@ -14,6 +15,10 @@ const router = express.Router();
 // Note: "/api/products" is prefixed to all "/" routes in this file, to determine the route to be opened, and response to serve.
 
 router.route("/").get(getProducts).post(protect, admin, createProduct); // Note: this means that if the call is a "GET" method at the home route, we call "getProducts"
-router.route("/:id").get(getProductsById).put(protect, admin, updateProduct); // Note: if the call is a "GET" method at the home route with id param, we call "getProductsById"
+router
+  .route("/:id")
+  .get(getProductsById)
+  .put(protect, admin, updateProduct)
+  .delete(protect, admin, deleteProduct); // Note: if the call is a "GET" method at the home route with id param, we call "getProductsById"
 
 export default router;
