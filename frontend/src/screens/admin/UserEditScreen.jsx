@@ -15,8 +15,8 @@ const UserEditScreen = () => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  //   const [password, setPassword] = useState("");
-  //   const [confirmPassword, setConfirmPassword] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
   const [isAdmin, setIsAdmin] = useState(false);
 
   const {
@@ -34,8 +34,8 @@ const UserEditScreen = () => {
     if (user) {
       setName(user.name);
       setEmail(user.email);
-      //   setPassword(user.password);
-      setIsAdmin(user.IsAdmin);
+      // setPassword(user.password);
+      setIsAdmin(user.isAdmin);
     }
   }, [user]);
 
