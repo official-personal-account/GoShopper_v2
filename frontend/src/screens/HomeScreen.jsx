@@ -7,6 +7,7 @@ import Paginate from "../components/Paginate";
 // import ProductCarousel from "../components/ProductCarousel";
 import { useGetProductsQuery } from "../slices/productsApiSlice";
 import ProductCarousel from "../components/ProductCarousel";
+import Meta from "../components/Meta";
 
 const HomeScreen = () => {
   const { keyword, pageNumber } = useParams();
@@ -18,12 +19,20 @@ const HomeScreen = () => {
   return (
     <>
       {!keyword ? (
-        <ProductCarousel />
+        <>
+          <h1>Top Products</h1>
+          <ProductCarousel />
+        </>
       ) : (
         <Link to="/" className="btn btn-light mb-4">
           Go Back
         </Link>
       )}
+      {/* {keyword && (
+        <Link to="/" className="btn btn-light mb-4">
+          Go Back
+        </Link>
+      )} */}
       {isLoading ? (
         <h2>
           <Loader /> Loading...
@@ -34,6 +43,7 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <>
+          <Meta />
           <h1>Latest Products</h1>
           <Row>
             {data.products.map((product) => (

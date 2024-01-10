@@ -7,7 +7,7 @@ import Product from "../models/productModel.js";
 // @access          Public
 // asyncHandler:    allows us to avoid using try/catch block for async functions (async functions returns a promise).
 const getProducts = asyncHandler(async (req, res) => {
-  const pageSize = 8;
+  const pageSize = process.env.PAGINATION_LIMIT;
   const page = Number(req.query.pageNumber) || 1;
 
   const keyword = req.query.keyword
@@ -144,10 +144,10 @@ const createProductReview = asyncHandler(async (req, res) => {
 
 // NOTE:
 // @desc        get top rated product
-// @route       GET /api/products/top
+// @route       GET /api/products/top-products
 // @access      Public
 const getTopProducts = asyncHandler(async (req, res) => {
-  const products = await Product.findById({}).sort({ rating: "desc" }).limit(3);
+  const products = await Product.find({}).sort({ rating: "desc" }).limit(3);
 
   res.status(200).json(products);
 });
