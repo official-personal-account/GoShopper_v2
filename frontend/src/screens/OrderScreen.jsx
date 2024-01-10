@@ -165,7 +165,7 @@ const OrderScreen = () => {
               {order.orderItems.map((orderItem, index) => (
                 <ListGroup.Item key={index}>
                   <Row>
-                    <Col xs={3} sm={2} md={1}>
+                    <Col xs={3} sm={2}>
                       <Image
                         src={orderItem.image}
                         alt={orderItem.name}
@@ -181,11 +181,11 @@ const OrderScreen = () => {
                       </Link>
                     </Col> */}
 
-                    <Col xs={5} sm={6} md={7} className="product-title">
+                    <Col xs={5} sm={6} className="product-title">
                       {orderItem.name}
                     </Col>
 
-                    <Col xs={4} sm={4} md={4}>
+                    <Col xs={4} sm={4}>
                       {orderItem.qty} x ${orderItem.price} = $
                       {orderItem.qty * orderItem.price}
                     </Col>
@@ -269,7 +269,7 @@ const OrderScreen = () => {
                         onClick={onApproveTest}
                         style={{ marginBottom: "10px" }}
                       >
-                        Test Pay Order
+                        Pay Now
                       </Button>
 
                       <div>
