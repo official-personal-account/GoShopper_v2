@@ -131,7 +131,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
 // @route           GET api/users
 // @access          Private/Admin
 const getUsers = asyncHandler(async (req, res) => {
-  const users = await User.find({});
+  const users = await User.find({}).sort({ createdAt: "desc" });
   res.status(200).json(users);
 });
 
@@ -156,11 +156,17 @@ const getUserById = asyncHandler(async (req, res) => {
 // @access          Private/Admin
 const deleteUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id);
+  // console.log(user);
 
   if (user) {
-    if (user.isAdmin) {
+    if (
+      user.isAdmin ||
+      user.name === "Jane Doe (test)" ||
+      user.name === "John Doe (test)" ||
+      user.name === "Caleb Selormey (test)"
+    ) {
       res.status(400);
-      throw new Error("Admin user can't be delete");
+      throw new Error("Can't delete admin/test user");
     }
     await User.deleteOne({ _id: user._id });
     res.status(200).json({ message: "User deleted successfully" });

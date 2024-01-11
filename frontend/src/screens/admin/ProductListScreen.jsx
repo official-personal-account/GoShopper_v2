@@ -28,8 +28,9 @@ const ProductListScreen = () => {
   const deleteHandler = async (id) => {
     if (window.confirm("Are you sure you want to delete product?")) {
       try {
-        await deleteProduct(id);
-        toast.success("Product deleted");
+        const res = await deleteProduct(id).unwrap();
+        // toast.success("Product deleted");
+        toast.success(res.message);
         refetch();
       } catch (err) {
         toast.error(err?.data?.message || err.error);

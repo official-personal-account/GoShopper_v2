@@ -44,7 +44,7 @@ const getProductById = asyncHandler(async (req, res) => {
 // @access          Private/Admin
 const createProduct = asyncHandler(async (req, res) => {
   const product = new Product({
-    name: "Product Name",
+    name: "New Product",
     price: 0,
     user: req.user._id,
     image: "/images/sample.jpg",
@@ -91,8 +91,20 @@ const updateProduct = asyncHandler(async (req, res) => {
 // @access          Private/Admin
 const deleteProduct = asyncHandler(async (req, res) => {
   const product = await Product.findById(req.params.id);
+  // console.log(product.name);
 
   if (product) {
+    if (
+      product.name === "Amazon Echo Dot 3rd Generation (test)" ||
+      product.name === "Cannon EOS 80D DSLR Camera (test)" ||
+      product.name === "Sony Playstation 4 Pro White Version (test)" ||
+      product.name === "Logitech G-Series Gaming Mouse (test)" ||
+      product.name === "Airpods Wireless Bluetooth Headphones (test)" ||
+      product.name === "iPhone 11 Pro 256GB Memory (test)"
+    ) {
+      res.status(400);
+      throw new Error("Can't delete test product.");
+    }
     await Product.deleteOne({ _id: product._id });
     res.status(200).json({ message: "Product deleted" });
   } else {
