@@ -25,7 +25,7 @@ const ProductEditScreen = () => {
   const {
     data: product,
     isLoading,
-    refetch,
+    // refetch,
     error,
   } = useGetProductDetailsQuery(productId);
 
@@ -34,6 +34,8 @@ const ProductEditScreen = () => {
 
   const [uploadProductImage, { isLoading: loadingUpload }] =
     useUploadProductImageMutation();
+
+  // const [uploadProductImage] = useUploadProductImageMutation();
 
   const navigate = useNavigate();
 
@@ -121,6 +123,8 @@ const ProductEditScreen = () => {
               ></Form.Control>
             </Form.Group>
 
+            {/* NEWLY INSERTED */}
+            {loadingUpload && <Loader />}
             <Form.Group controlId="image" className="my-2">
               <Form.Label>Image</Form.Label>
               <Form.Control
