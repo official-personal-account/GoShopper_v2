@@ -9,7 +9,7 @@ import { savePaymentMethod } from "../slices/cartSlice";
 const PaymentScreen = () => {
   // const [paymentMethod, setPaymentMethod] = useState("PayPal");
   const [paymentMethod, setPaymentMethod] = useState("Card");
-  // console.log(paymentMethod);
+  console.log(paymentMethod);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -40,12 +40,14 @@ const PaymentScreen = () => {
             <Form.Check
               type="radio"
               className="my-2"
-              label="Credit/Debit Card"
+              label="Card (debit/credit/prepaid)"
               id="Card"
               name="paymentMethod"
               value="Card"
               checked
-              onChange={(event) => setPaymentMethod(event.target.value)}
+              onChange={(event) => {
+                setPaymentMethod(event.target.value);
+              }}
             ></Form.Check>
           </Col>
 
@@ -70,7 +72,6 @@ const PaymentScreen = () => {
               id="mobileMoney"
               name="paymentMethod"
               value="Mobile Money"
-              // checked
               onChange={(event) => setPaymentMethod(event.target.value)}
             ></Form.Check>
           </Col> */}
