@@ -100,20 +100,24 @@ const ShippingScreen = () => {
         </Form.Group>
 
         <Form.Group controlId="phoneNumber" className="my-3">
-          <Form.Label>Phone Number</Form.Label>
+          <Form.Label>Phone Number (10 digit)</Form.Label>
           <Form.Control
             type="tel"
             placeholder="Your phone number"
             value={phoneNumber}
+            maxLength="10"
             onChange={(event) => setPhoneNumber(event.target.value)}
             required
           ></Form.Control>
           <p style={{ color: "red", fontSize: "small" }}>
+            <strong>Example: 0272000000</strong>
+          </p>
+          {/* <p style={{ color: "red", fontSize: "small" }}>
             <strong>
               Include country code if living outside Ghana - e.g. +234 xx xxxx
               xxx
             </strong>
-          </p>
+          </p> */}
         </Form.Group>
 
         <Button type="submit" variant="primary" className="my-2">

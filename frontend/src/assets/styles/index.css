@@ -65,3 +65,7 @@ table th {
   aspect-ratio: 5/4;
   object-fit: contain;
 }
+
+.red-colored-text {
+  color: red;
+}

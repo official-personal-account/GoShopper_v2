@@ -151,7 +151,8 @@ const OrderScreen = () => {
               <h2>Payment Method</h2>
               <p>
                 <strong>Method: </strong>
-                {order.paymentMethod}/Card
+                {/* {order.paymentMethod}/Card */}
+                {order.paymentMethod}
               </p>
               {order.isPaid ? (
                 <Message variant="success">Paid on: {order.paidAt}</Message>
@@ -227,7 +228,7 @@ const OrderScreen = () => {
                 </Row>
               </ListGroup.Item>
 
-              <ListGroup.Item>
+              {/* <ListGroup.Item>
                 <p
                   style={{
                     fontSize: "small",
@@ -239,7 +240,7 @@ const OrderScreen = () => {
                 >
                   Card payment does not require a PayPal account
                 </p>
-              </ListGroup.Item>
+              </ListGroup.Item> */}
 
               {/* <ListGroup.Item>
                 <Message variant="info">
