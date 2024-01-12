@@ -48,7 +48,7 @@ const ShippingScreen = () => {
           <Form.Label>Address</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Delivery Address"
+            placeholder="Delivery Address or Closest Landmark"
             value={address}
             onChange={(event) => setAddress(event.target.value)}
             required

@@ -70,6 +70,17 @@ const updateProduct = asyncHandler(async (req, res) => {
   const product = await Product.findById(req.params.id);
 
   if (product) {
+    if (
+      product.name === "Amazon Echo Dot 3rd Generation (test)" ||
+      product.name === "Cannon EOS 80D DSLR Camera (test)" ||
+      product.name === "Sony Playstation 4 Pro White Version (test)" ||
+      product.name === "Logitech G-Series Gaming Mouse (test)" ||
+      product.name === "Airpods Wireless Bluetooth Headphones (test)" ||
+      product.name === "iPhone 11 Pro 256GB Memory (test)"
+    ) {
+      res.status(400);
+      throw new Error("Can't edit test product");
+    }
     product.name = name;
     product.price = price;
     product.description = description;
@@ -79,7 +90,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     product.countInStock = countInStock;
 
     const updatedProduct = await product.save();
-    res.json(updatedProduct);
+    res.status(200).json({ message: "Product updated", updatedProduct });
   } else {
     res.status("404");
     throw new Error("Resource not found");

@@ -9,7 +9,7 @@ import { savePaymentMethod } from "../slices/cartSlice";
 const PaymentScreen = () => {
   // const [paymentMethod, setPaymentMethod] = useState("PayPal");
   const [paymentMethod, setPaymentMethod] = useState("Card");
-  console.log(paymentMethod);
+  // console.log(paymentMethod);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();

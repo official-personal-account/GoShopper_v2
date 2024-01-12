@@ -121,7 +121,7 @@ const ProductScreen = () => {
                       <Col>
                         <strong>
                           {product.countInStock > 0 ? (
-                            "In stock"
+                            <p className="green-colored-text">In stock</p>
                           ) : (
                             <p className="red-colored-text">Out of stock</p>
                           )}

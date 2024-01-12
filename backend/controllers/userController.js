@@ -184,6 +184,15 @@ const updateUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id);
 
   if (user) {
+    if (
+      user.isAdmin ||
+      user.name === "Jane Doe (test)" ||
+      user.name === "John Doe (test)" ||
+      user.name === "Caleb Selormey (test)"
+    ) {
+      res.status(400);
+      throw new Error("Can't edit admin or test user");
+    }
     user.name = req.body.name || user.name;
     user.email = req.body.email || user.email;
     // user.password = req.body.password || user.password;
@@ -192,6 +201,7 @@ const updateUser = asyncHandler(async (req, res) => {
     const updatedUser = await user.save();
 
     res.status(200).json({
+      message: "User updated",
       _id: updatedUser._id,
       name: updatedUser.name,
       email: updatedUser.email,
