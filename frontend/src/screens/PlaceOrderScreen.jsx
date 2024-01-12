@@ -54,8 +54,9 @@ const PlaceOrderScreen = () => {
               <h2>Shipping/Delivery Address</h2>
               <p>
                 <strong>Address: </strong>
-                {cart.shippingAddress.address}, {cart.shippingAddress.city},{" "}
-                {cart.shippingAddress.state}, {cart.shippingAddress.postalCode},{" "}
+                {cart.shippingAddress.address}, {cart.shippingAddress.area},{" "}
+                {cart.shippingAddress.city}, {cart.shippingAddress.state},{" "}
+                {cart.shippingAddress.postalCode},{" "}
                 {cart.shippingAddress.country}{" "}
               </p>
               <p>

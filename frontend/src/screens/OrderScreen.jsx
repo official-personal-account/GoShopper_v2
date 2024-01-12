@@ -134,7 +134,8 @@ const OrderScreen = () => {
               </p>
               <p>
                 <strong>Address:</strong> {order.shippingAddress.address},{" "}
-                {order.shippingAddress.city}, {order.shippingAddress.State},{" "}
+                {order.shippingAddress.area}, {order.shippingAddress.city},
+                {order.shippingAddress.State},{" "}
                 {order.shippingAddress.postalCode},{" "}
                 {order.shippingAddress.country}
               </p>
@@ -228,7 +229,7 @@ const OrderScreen = () => {
                 </Row>
               </ListGroup.Item>
 
-              {/* <ListGroup.Item>
+              <ListGroup.Item>
                 <p
                   style={{
                     fontSize: "small",
@@ -238,9 +239,11 @@ const OrderScreen = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  Card payment does not require a PayPal account
+                  {/* Card payment does not require a PayPal account */}
+                  "Pay Now" button is a test pay button. Payment gateway to be
+                  integrated upon deployment for client.
                 </p>
-              </ListGroup.Item> */}
+              </ListGroup.Item>
 
               {/* <ListGroup.Item>
                 <Message variant="info">

@@ -11,6 +11,7 @@ const ShippingScreen = () => {
   const { shippingAddress } = cart;
 
   const [address, setAddress] = useState(shippingAddress?.address || "");
+  const [area, setArea] = useState(shippingAddress?.area || "");
   const [city, setCity] = useState(shippingAddress?.city || "");
   const [state, setState] = useState(shippingAddress?.state || "");
   const [postalCode, setPostalCode] = useState(
@@ -29,6 +30,7 @@ const ShippingScreen = () => {
     dispatch(
       saveShippingAddress({
         address,
+        area,
         city,
         state,
         postalCode,
@@ -51,6 +53,17 @@ const ShippingScreen = () => {
             placeholder="Delivery Address or Closest Landmark"
             value={address}
             onChange={(event) => setAddress(event.target.value)}
+            required
+          ></Form.Control>
+        </Form.Group>
+
+        <Form.Group controlId="area" className="my-3">
+          <Form.Label>Area</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Example: Osu, Dansoman"
+            value={area}
+            onChange={(event) => setArea(event.target.value)}
             required
           ></Form.Control>
         </Form.Group>
