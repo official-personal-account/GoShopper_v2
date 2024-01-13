@@ -8,7 +8,7 @@ export const updateCart = (state) => {
     state.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
 
-  // Calculate shipping price (if order is over ¢100 then free, else ¢10 shipping)
+  // Calculate shipping price (if order is over ₵100 then free, else ₵10 shipping)
   state.shippingPrice = addDecimals(state.itemsPrice > 100 ? 0 : 10);
 
   // Calculate tax price (15% tax)

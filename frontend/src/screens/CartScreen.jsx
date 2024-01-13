@@ -64,7 +64,7 @@ const CartScreen = () => {
                     ...
                   </Col>
                   <Col xs={2} md={2}>
-                    ¢{item.price}
+                    ₵{item.price}
                   </Col>
                   <Col xs={3} md={2}>
                     <Form.Control
@@ -105,7 +105,7 @@ const CartScreen = () => {
                 {cartItems.reduce((acc, item) => acc + item.qty, 0)} item(s)
               </h3>
               <p>
-                Subtotal: ¢
+                Subtotal: ₵
                 {cartItems
                   .reduce((acc, item) => acc + item.qty * item.price, 0)
                   .toFixed(2)}
