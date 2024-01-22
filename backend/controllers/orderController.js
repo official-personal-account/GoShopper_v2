@@ -1,5 +1,6 @@
 import asyncHandler from "../middleware/asyncHandler.js";
 import Order from "../models/orderModel.js";
+import Product from "../models/productModel.js";
 
 // NOTE:
 // @desc            Create new order
@@ -90,6 +91,17 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
     };
 
     const updatedOrder = await order.save();
+
+    // update countInStock Qty - 1st method
+    for (const index in updatedOrder.orderItems) {
+      const item = updatedOrder.orderItems[index];
+      //console.log("Item - ", item);
+      const product = await Product.findById(item.product);
+      //console.log("Product - ", product);
+      product.countInStock -= item.qty;
+      //console.log("updatedQty - ", product.countInStock);
+      product.save();
+    }
 
     res.status(200).json(updatedOrder);
   } else {
