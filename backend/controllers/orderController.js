@@ -92,7 +92,7 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
 
     const updatedOrder = await order.save();
 
-    // update countInStock Qty - 1st method
+    // update countInStock Qty using for/in loop - 1st method
     for (const index in updatedOrder.orderItems) {
       const item = updatedOrder.orderItems[index];
       //console.log("Item - ", item);
