@@ -159,14 +159,15 @@ const deleteUser = asyncHandler(async (req, res) => {
   // console.log(user);
 
   if (user) {
+    // ifelse statement to be removed in deployment
     if (
       user.isAdmin ||
-      user.name === "Jane Doe (test)" ||
-      user.name === "John Doe (test)" ||
-      user.name === "Caleb Selormey (test)"
+      user.name === "Jane Doe" ||
+      user.name === "John Doe" ||
+      user.name === "Caleb Selormey"
     ) {
       res.status(400);
-      throw new Error("Can't delete admin/test user");
+      throw new Error("Can't delete test user");
     }
     await User.deleteOne({ _id: user._id });
     res.status(200).json({ message: "User deleted successfully" });
@@ -186,12 +187,12 @@ const updateUser = asyncHandler(async (req, res) => {
   if (user) {
     if (
       user.isAdmin ||
-      user.name === "Jane Doe (test)" ||
-      user.name === "John Doe (test)" ||
-      user.name === "Caleb Selormey (test)"
+      user.name === "Jane Doe" ||
+      user.name === "John Doe" ||
+      user.name === "Caleb Selormey"
     ) {
       res.status(400);
-      throw new Error("Can't edit admin or test user");
+      throw new Error("Can't edit test user");
     }
     user.name = req.body.name || user.name;
     user.email = req.body.email || user.email;

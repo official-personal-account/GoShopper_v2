@@ -47,10 +47,10 @@ const ShippingScreen = () => {
       <h1>Shipping/Delivery Address</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="address" className="my-3">
-          <Form.Label>Address</Form.Label>
+          <Form.Label>Delivery Address or Closest Landmark</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Delivery Address or Closest Landmark"
+            placeholder="Type your address"
             value={address}
             onChange={(event) => setAddress(event.target.value)}
             required
@@ -58,10 +58,10 @@ const ShippingScreen = () => {
         </Form.Group>
 
         <Form.Group controlId="area" className="my-3">
-          <Form.Label>Area</Form.Label>
+          <Form.Label>Area (example: Osu, Dansoman)</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Example: Osu, Dansoman"
+            placeholder="Enter your location"
             value={area}
             onChange={(event) => setArea(event.target.value)}
             required
@@ -83,7 +83,7 @@ const ShippingScreen = () => {
           <Form.Label>State/Region</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Your State/Region"
+            placeholder="Your Region or State"
             value={state}
             onChange={(event) => setState(event.target.value)}
             required
@@ -91,7 +91,7 @@ const ShippingScreen = () => {
         </Form.Group>
 
         <Form.Group controlId="postalCode" className="my-3">
-          <Form.Label>Postal Code</Form.Label>
+          <Form.Label>Postal Code (optional)</Form.Label>
           <Form.Control
             type="text"
             placeholder="Enter Postal Code"

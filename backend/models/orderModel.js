@@ -59,6 +59,19 @@ const orderSchema = new mongoose.Schema(
       required: true,
       default: 0.0,
     },
+    reference: {
+      type: String,
+      unique: true,
+    },
+    paystack_ref: {
+      type: String,
+    },
+    paystack_access_code: {
+      type: String,
+    },
+    paystack_transaction_status: {
+      type: String,
+    },
     isPaid: {
       type: Boolean,
       required: true,

@@ -40,7 +40,7 @@ const PaymentScreen = () => {
             <Form.Check
               type="radio"
               className="my-2"
-              label="Card (debit/credit/prepaid)"
+              label="Card / Mobile Money"
               id="Card"
               name="paymentMethod"
               value="Card"

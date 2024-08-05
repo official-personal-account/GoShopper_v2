@@ -4,17 +4,21 @@ import { Row, Col, ListGroup, Image, Button, Card } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
+import PaystackPop from "@paystack/inline-js";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import {
   useGetOrderDetailsQuery,
+  useGetAccessCodeQuery, // NOTE: FOR BACKEND PAYSTACK
   usePayOrderMutation,
   useGetPayPalClientIdQuery,
   useDeliverOrderMutation,
+  useInitiateTransMutation, // NOTE: FOR BACKEND PAYSTACK
 } from "../slices/ordersApiSlice";
 
 const OrderScreen = () => {
   const { id: orderId } = useParams();
+  // console.log(orderId);
 
   const {
     data: order,
@@ -23,10 +27,26 @@ const OrderScreen = () => {
     error,
   } = useGetOrderDetailsQuery(orderId);
 
+  // console.log(order.user.name, order.reference);
+
+  // NOTE: FOR BACKEND PAYSTACK
+  const {
+    data: access_code,
+    refetch: refetchingAccessCode,
+    // isLoading: loadingCode,
+    // error: loadingErrorCode,
+  } = useGetAccessCodeQuery(orderId);
+
+  // console.log("reference: " + order.reference);
+
   const [payOrder, { isLoading: loadingPay }] = usePayOrderMutation();
 
   const [deliverOrder, { isLoading: loadingDeliver }] =
     useDeliverOrderMutation();
+
+  // NOTE: FOR BACKEND PAYSTACK
+  const [initiateTrans, { isLoading: loadingTransaction }] =
+    useInitiateTransMutation();
 
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
 
@@ -61,7 +81,7 @@ const OrderScreen = () => {
   function onApprove(data, actions) {
     return actions.order.capture().then(async function (details) {
       try {
-        await payOrder({ orderId, details });
+        await payOrder({ orderId, details }).unwrap();
         refetch();
         toast.success("Payment Successful!");
       } catch (err) {
@@ -69,8 +89,9 @@ const OrderScreen = () => {
       }
     });
   }
+
   async function onApproveTest() {
-    await payOrder({ orderId, details: { payer: {} } });
+    await payOrder({ orderId, details: { payer: {} } }).unwrap();
     refetch();
     toast.success("Payment Successful!");
   }
@@ -104,6 +125,46 @@ const OrderScreen = () => {
       toast.error(err?.data?.message || err.message);
     }
   };
+
+  // NOTE: PAYSTACK PAYMENT SCREEN - FRONTEND UI ONLY
+  // const payWithPaystackHandler = async (event) => {
+  //   // event.preventDefault();
+
+  //   const popup = new PaystackPop();
+  //   popup.newTransaction({
+  //     // key: "pk_live_bb34bea4fa5fdcad7a0386a6e5228c02edd2f34c",
+  //     key: "pk_test_a3f15c2486d2df46cec9d5fdb6a46152eb792cc7",
+  //     reference: order.reference,
+  //     channels: ["card", "mobile_money"],
+  //     currency: "GHS",
+  //     amount: Math.trunc(order.totalPrice * 100),
+  //     name: order.user.name,
+  //     email: order.user.email,
+  //     phone: order.shippingAddress.phoneNumber,
+  //   });
+  // };
+
+  // NOTE: METHOD 1 - FOR BACKEND PAYSTACK - INITIATING TRANSACTION THROUGH BACKEND
+  async function payWithPaystackHandler() {
+    const response = await initiateTrans(orderId);
+
+    const access_code = response.data.data.access_code; // access code derived from backend response
+
+    if (response.data.status === true) {
+      const popup = new PaystackPop();
+
+      popup.resumeTransaction(access_code); // access code derived from backend response. Method 2 is to retrieve access code from useGetAccessCodeQuery()
+    } else {
+      console.log("Transaction could not be started");
+    }
+    // console.log("The order (from orderScreen): " + order);
+    // console.log("The access code (from orderScreen): " + accessCode);
+
+    // console.log(popup);
+
+    // refetch();
+  }
+  // PAYSTACK PAYMENT SCREEN END
 
   return isLoading ? (
     <Loader />
@@ -152,8 +213,8 @@ const OrderScreen = () => {
               <h2>Payment Method</h2>
               <p>
                 <strong>Method: </strong>
-                {/* {order.paymentMethod}/Card */}
-                {order.paymentMethod}
+                {order.paymentMethod} / Mobile Money
+                {/* {order.paymentMethod} */}
               </p>
               {order.isPaid ? (
                 <Message variant="success">Paid on: {order.paidAt}</Message>
@@ -229,7 +290,7 @@ const OrderScreen = () => {
                 </Row>
               </ListGroup.Item>
 
-              <ListGroup.Item>
+              {/* <ListGroup.Item>
                 <p
                   style={{
                     fontSize: "small",
@@ -239,11 +300,11 @@ const OrderScreen = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  {/* Card payment does not require a PayPal account */}
+                  Card payment does not require a PayPal account
                   "Pay Now" button is a test pay button. Payment gateway to be
                   integrated upon deployment for client.
                 </p>
-              </ListGroup.Item>
+              </ListGroup.Item> */}
 
               {/* <ListGroup.Item>
                 <Message variant="info">
@@ -269,20 +330,27 @@ const OrderScreen = () => {
                     <Loader />
                   ) : (
                     <div>
-                      <Button
+                      {/* <Button
                         onClick={onApproveTest}
+                        style={{ marginBottom: "10px" }}
+                      >
+                        Test Pay Now
+                      </Button> */}
+
+                      <Button
+                        onClick={payWithPaystackHandler}
                         style={{ marginBottom: "10px" }}
                       >
                         Pay Now
                       </Button>
 
-                      <div>
+                      {/* <div>
                         <PayPalButtons
                           createOrder={createOrder}
                           onApprove={onApprove}
                           onError={onError}
                         ></PayPalButtons>
-                      </div>
+                      </div> */}
                     </div>
                   )}
                 </ListGroup.Item>

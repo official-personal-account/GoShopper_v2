@@ -30,6 +30,19 @@ export const ordersApiSlice = apiSlice.injectEndpoints({
       }),
       keepUnusedDataFor: 5,
     }),
+    // New code
+    initiateTrans: builder.mutation({
+      query: (orderId) => ({
+        url: `${ORDERS_URL}/${orderId}/initiateTransaction`,
+        method: "POST",
+      }),
+    }),
+    getAccessCode: builder.query({
+      query: (orderId) => ({
+        url: `${ORDERS_URL}/${orderId}/getcode`,
+      }),
+      keepUnusedDataFor: 5,
+    }),
     getMyOrders: builder.query({
       query: () => ({
         url: `${ORDERS_URL}/myorders`,
@@ -59,4 +72,6 @@ export const {
   useGetMyOrdersQuery,
   useGetOrdersQuery,
   useDeliverOrderMutation,
+  useGetAccessCodeQuery,
+  useInitiateTransMutation,
 } = ordersApiSlice;

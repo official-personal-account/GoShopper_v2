@@ -10,6 +10,7 @@ import userRoutes from "./routes/userRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import colors from "colors";
+import cors from "cors";
 const port = process.env.PORT || 8000;
 
 connectDB(); // Note: connects to MongoDB from {import connectDB from "./config/db.js"}
@@ -23,6 +24,8 @@ app.use(express.urlencoded({ extended: true })); // Note: encodes data in a form
 // Cookie parser middleware
 app.use(cookieParser());
 
+// app.use(cors());
+
 // Note: app.use is an express routing method, used in place of app.get.
 // Note: Anytime the specified route (/api/products) is hit, it looks into the corresponding route file (productRoutes).
 // Note: And then, it prefix (adds) the route to all the routes in the file, and serve the appropriate response.
@@ -35,6 +38,11 @@ app.use("/api/upload", uploadRoutes);
 app.get("/api/config/paypal", (req, res) =>
   res.send({ clientId: process.env.PAYPAL_CLIENT_ID })
 );
+
+// Paystack Route
+// app.get("/paystack", (req, res) =>
+//   res.send({ clientId: process.env.PAYPAL_CLIENT_ID })
+// );
 
 const __dirname = path.resolve(); // Set __dirname to current directory
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));

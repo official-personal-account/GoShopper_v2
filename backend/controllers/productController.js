@@ -71,12 +71,12 @@ const updateProduct = asyncHandler(async (req, res) => {
 
   if (product) {
     if (
-      product.name === "Amazon Echo Dot 3rd Generation (test)" ||
-      product.name === "Cannon EOS 80D DSLR Camera (test)" ||
-      product.name === "Sony Playstation 4 Pro White Version (test)" ||
-      product.name === "Logitech G-Series Gaming Mouse (test)" ||
-      product.name === "Airpods Wireless Bluetooth Headphones (test)" ||
-      product.name === "iPhone 11 Pro 256GB Memory (test)"
+      product.name === "Amazon Echo Dot 3rd Generation" ||
+      product.name === "Cannon EOS 80D DSLR Camera" ||
+      product.name === "Sony Playstation 4 Pro White Version" ||
+      product.name === "Logitech G-Series Gaming Mouse" ||
+      product.name === "Airpods Wireless Bluetooth Headphones" ||
+      product.name === "iPhone 11 Pro 256GB Memory"
     ) {
       res.status(400);
       throw new Error("Can't edit test product");
@@ -105,13 +105,18 @@ const deleteProduct = asyncHandler(async (req, res) => {
   // console.log(product.name);
 
   if (product) {
+    // ifelse statement to be removed in deployment
     if (
-      product.name === "Amazon Echo Dot 3rd Generation (test)" ||
-      product.name === "Cannon EOS 80D DSLR Camera (test)" ||
-      product.name === "Sony Playstation 4 Pro White Version (test)" ||
-      product.name === "Logitech G-Series Gaming Mouse (test)" ||
-      product.name === "Airpods Wireless Bluetooth Headphones (test)" ||
-      product.name === "iPhone 11 Pro 256GB Memory (test)"
+      product.name === "Amazon Echo Dot 3rd Generation" ||
+      product.name === "Cannon EOS 80D DSLR Camera" ||
+      product.name === "Sony Playstation 4 Pro White Version" ||
+      product.name === "Logitech G-Series Gaming Mouse" ||
+      product.name === "Airpods Wireless Bluetooth Headphones" ||
+      product.name === "iPhone 11 Pro 256GB Memory" ||
+      product.name === "Men Kaftan" ||
+      product.name === "Jollof Rice" ||
+      product.name === "Women Lace" ||
+      product.name === "Banku & Tilapia"
     ) {
       res.status(400);
       throw new Error("Can't delete test product.");
