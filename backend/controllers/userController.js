@@ -187,10 +187,11 @@ const updateUser = asyncHandler(async (req, res) => {
 
   if (user) {
     if (
-      user.isAdmin ||
-      user.name === "Jane Doe" ||
-      user.name === "John Doe" ||
-      user.name === "Caleb Selormey"
+      user.email === "jane@email.com" ||
+      user.email === "john@email.com" ||
+      user.email === "admin@email.com" ||
+      user.email === "myadmin@email.com" ||
+      user.email === "jbrown@email.com"
     ) {
       res.status(400);
       throw new Error("Can't edit test user");
