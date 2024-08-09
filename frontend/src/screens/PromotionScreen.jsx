@@ -5,11 +5,11 @@ const PromotionScreen = () => {
   return (
     <>
       <Link className="btn btn-secondary my-3" to={"/"}>
-        Go Back
+        View Proshopper
       </Link>
       <Row>
         <Col md={6}>
-          <Card className="p-4 m-4">
+          <Card className="p-4 m-3">
             <h2>Why Proshopper?</h2>
             <p>
               *Proshopper* is easy to use & fully customizable. It is developed
@@ -64,7 +64,7 @@ const PromotionScreen = () => {
         </Col>
 
         <Col md={6}>
-          <Card className="p-4 m-4">
+          <Card className="p-4 m-3">
             <h2>How to take part in the promo challenge</h2>
             <p>
               To stand a chance to get Proshopper customized & deployed for you,
@@ -109,7 +109,7 @@ const PromotionScreen = () => {
         </Col>
 
         <Col md={6}>
-          <Card className="p-4 m-4">
+          <Card className="p-4 m-3">
             <h2>Pricing (GHS)</h2>
             <p>
               <span style={{ marginLeft: "15px" }}>- Monthly payment: 225</span>{" "}

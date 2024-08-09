@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Header from "./components/Header";
-import PromotionBanner from "./components/PromotinBanner";
+import PromotionBanner from "./components/PromotionBanner";
 import Footer from "./components/Footer";
 
 function App() {
