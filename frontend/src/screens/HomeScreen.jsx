@@ -24,12 +24,12 @@ const HomeScreen = () => {
           <ProductCarousel />
         </>
       ) : (
-        <Link to="/" className="btn btn-light mb-4">
+        <Link to="/" className="btn btn-secondary mb-4">
           Go Back
         </Link>
       )}
       {/* {keyword && (
-        <Link to="/" className="btn btn-light mb-4">
+        <Link to="/" className="btn btn-secondary mb-4">
           Go Back
         </Link>
       )} */}

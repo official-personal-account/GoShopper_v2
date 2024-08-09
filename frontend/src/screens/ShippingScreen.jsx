@@ -97,7 +97,6 @@ const ShippingScreen = () => {
             placeholder="Enter Postal Code"
             value={postalCode}
             onChange={(event) => setPostalCode(event.target.value)}
-            required
           ></Form.Control>
         </Form.Group>
 
