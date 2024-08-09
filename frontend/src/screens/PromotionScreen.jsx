@@ -133,11 +133,6 @@ const PromotionScreen = () => {
               <span style={{ marginLeft: "15px" }}>
                 - 5 year payment: 127/mo
               </span>
-              <br />
-              <span style={{ marginLeft: "15px" }}>- admin@email.com</span>{" "}
-              <br />{" "}
-              <span style={{ marginLeft: "15px" }}> - myadmin@email.com</span>
-              <br />
             </p>
             <p>
               <strong>Bonus:</strong> 1 month free digital ad service to help
