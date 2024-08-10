@@ -100,10 +100,11 @@ const PromotionScreen = () => {
             </p>
             <p>
               <strong>Note:</strong> On the 15th of each month, beginning
-              September, for the next 3 months, 10 people would be selected, and
-              their 4 digit number would be placed in a computerized random
-              selector, in a live recorded video session. The person with the
-              number selected, gets an online store for free!
+              September, for the next 3 months, up to 10 people would be
+              selected, and their 4 digit number would be placed in a
+              computerized random selector, in a live recorded video session.
+              The person with the number selected, gets an online store for
+              free!
             </p>
           </Card>
         </Col>
