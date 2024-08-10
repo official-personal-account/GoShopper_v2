@@ -72,8 +72,8 @@ const PromotionScreen = () => {
             </p>
             <p>1. Like "Innosol Technologies" Facebook page</p>
             <p>
-              2. Locate the flyer post with "Proshopper" boldly written on it,
-              on the page, and share to your page
+              2. Share the flyer post that has "Proshopper" boldly written on
+              it, to your page
             </p>
             <p>
               3. In the comment section:
