@@ -136,9 +136,9 @@ const PromotionScreen = () => {
               </span>
             </p>
             <p>
-              <strong>Bonus:</strong> 1 month free digital ad service to help
-              drive traffic from social media, Google & across the web, to your
-              online store
+              <strong>Bonus:</strong> Free domain + 1 month free digital ad
+              service to help drive traffic from social media, Google & across
+              the web, to your online store
             </p>
           </Card>
         </Col>
