@@ -305,20 +305,19 @@ const OrderScreen = () => {
               </ListGroup.Item> */}
 
               <ListGroup.Item>
-                <Message variant="info">
-                  <p
-                    style={{
-                      fontSize: "x-small",
-                      textAlign: "center",
-                      marginTop: "10px",
-                      fontWeight: "bold",
-                      // textTransform: "uppercase",
-                    }}
-                  >
-                    Use "Test Pay Now" button to test payment. "Pay Now" button
-                    is a live payment button.
-                  </p>
-                </Message>
+                <p
+                  style={{
+                    fontSize: "x-small",
+                    textAlign: "center",
+                    marginTop: "10px",
+                    fontWeight: "bold",
+                    color: "red",
+                    // textTransform: "uppercase",
+                  }}
+                >
+                  Use "Test Pay Now" button to test payment. "Pay Now" button is
+                  a live payment button.
+                </p>
               </ListGroup.Item>
 
               {!order.isPaid && (
