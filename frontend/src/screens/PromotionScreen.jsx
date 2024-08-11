@@ -16,18 +16,22 @@ const PromotionScreen = () => {
               for businesses that want to have their own ecommerce platform.
               With proshopper, customers can order & pay with mobile money or
               card. Because every product on your online store has the relevant
-              product info & *Proshopper* itself guides the customer through the
-              order process, there is minimal interaction between you and the
-              customer, before or during the order process. This saves you time,
-              and allows you to focus on other things, whiles still selling.{" "}
+              product info, and *Proshopper* itself guides the customer through
+              the order process, there is minimal interaction between you and
+              the customer, before or during the order process. This saves you
+              time, and allows you to focus on other things, whiles still
+              selling.{" "}
             </p>
             <p>
               Watch a live recorded video demo below, in the sequence it was
               labelled, or explore Proshopper by yourself. Where required to log
-              in, in order to complete an order, use any of the emails provided
-              below or register to create your own.{" "}
-              <strong>When testing, use the "Test Pay Now" button.</strong> The
-              "Pay Now" button is a live payment button.
+              in, in order to complete a test order, use any of the emails
+              provided below or register to create your own.{" "}
+              <strong>
+                To test payment, use the "Test Pay Now" button, as it does not
+                trigger actual payment process.
+              </strong>{" "}
+              The "Pay Now" button is a live payment button.
               <br />
               <strong>Ordinary user:</strong>
               <br />
