@@ -89,7 +89,7 @@ const chargeSuccess = async function (data) {
     const verificationResponse = await paystack.transaction.verify({
       reference: reference,
     });
-    // console.log({verificationResponse: verificationResponse});
+    // console.log({ verificationResponse: verificationResponse });
 
     const amountPaid = verificationResponse.data.amount / 100;
     // console.log("Amount paid: " + amountPaid);

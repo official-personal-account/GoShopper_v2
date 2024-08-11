@@ -25,7 +25,9 @@ const PromotionScreen = () => {
               Watch a live recorded video demo below, in the sequence it was
               labelled, or explore Proshopper by yourself. Where required to log
               in, in order to complete an order, use any of the emails provided
-              below or register to create your own.
+              below or register to create your own.{" "}
+              <strong>When testing, use the "Test Pay Now" button.</strong> The
+              "Pay Now" button is a live payment button.
               <br />
               <strong>Ordinary user:</strong>
               <br />
@@ -113,7 +115,14 @@ const PromotionScreen = () => {
           <Card className="p-4 m-3">
             <h2>Pricing (GHS)</h2>
             <p>
-              <span style={{ marginLeft: "15px" }}>- Monthly payment: 225</span>{" "}
+              <span>1st year: 88/mo (paid for full year)</span>{" "}
+            </p>
+            <p>
+              <strong>Renews at:</strong>
+              <br />{" "}
+              <span style={{ marginLeft: "15px" }}>
+                - Monthly payment: 225
+              </span>{" "}
               <br />{" "}
               <span style={{ marginLeft: "15px" }}>
                 - 1 year payment: 175/mo

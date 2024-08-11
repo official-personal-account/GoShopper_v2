@@ -30,12 +30,12 @@ const OrderScreen = () => {
   // console.log(order.user.name, order.reference);
 
   // NOTE: FOR BACKEND PAYSTACK
-  const {
-    data: access_code,
-    refetch: refetchingAccessCode,
-    // isLoading: loadingCode,
-    // error: loadingErrorCode,
-  } = useGetAccessCodeQuery(orderId);
+  // const {
+  //   data: access_code,
+  //   refetch: refetchingAccessCode,
+  //   // isLoading: loadingCode,
+  //   // error: loadingErrorCode,
+  // } = useGetAccessCodeQuery(orderId);
 
   // console.log("reference: " + order.reference);
 
@@ -301,12 +301,10 @@ const OrderScreen = () => {
                   }}
                 >
                   Card payment does not require a PayPal account
-                  "Pay Now" button is a test pay button. Payment gateway to be
-                  integrated upon deployment for client.
                 </p>
               </ListGroup.Item> */}
 
-              {/* <ListGroup.Item>
+              <ListGroup.Item>
                 <Message variant="info">
                   <p
                     style={{
@@ -314,13 +312,14 @@ const OrderScreen = () => {
                       textAlign: "center",
                       marginTop: "10px",
                       fontWeight: "bold",
-                      textTransform: "uppercase",
+                      // textTransform: "uppercase",
                     }}
                   >
-                    Card payment does not require a PayPal account
+                    Use "Test Pay Now" button to test payment. "Pay Now" button
+                    is a live payment button.
                   </p>
                 </Message>
-              </ListGroup.Item> */}
+              </ListGroup.Item>
 
               {!order.isPaid && (
                 <ListGroup.Item>
@@ -330,18 +329,18 @@ const OrderScreen = () => {
                     <Loader />
                   ) : (
                     <div>
-                      {/* <Button
-                        onClick={onApproveTest}
-                        style={{ marginBottom: "10px" }}
-                      >
-                        Test Pay Now
-                      </Button> */}
-
                       <Button
                         onClick={payWithPaystackHandler}
                         style={{ marginBottom: "10px" }}
                       >
                         Pay Now
+                      </Button>
+
+                      <Button
+                        onClick={onApproveTest}
+                        style={{ margin: "0 10px 10px" }}
+                      >
+                        Test Pay Now
                       </Button>
 
                       {/* <div>
