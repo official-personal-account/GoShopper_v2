@@ -17,7 +17,11 @@
 - productController.js
 
 4. Add webhook URL in paystack account.
-5. Remove "Test Pay Now" Button in "OrderScreen.jsx".
+
+5. Remove from OrderScreen.jsx:
+
+- "Test Pay Now" button
+- "Use test pay button..." notice
 
 ## IN DEVELOPMENT / TEST MODE
 
