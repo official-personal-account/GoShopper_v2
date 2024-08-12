@@ -38,7 +38,19 @@ const PlaceOrderScreen = () => {
       }).unwrap();
 
       dispatch(clearCartItems());
-      navigate(`/order/${res._id}`);
+
+      // Note: New code start: directs user to thank you page after order placement, if "Cash On Delivery"
+      const paymentMethod = cart.paymentMethod;
+
+      if (paymentMethod !== "Card / Mobile Money") {
+        navigate(`/thankyou`);
+      } else {
+        navigate(`/order/${res._id}`);
+      }
+      // New code end
+
+      // Note: original code
+      // navigate(`/order/${res._id}`);
     } catch (error) {
       toast.error(error);
     }
@@ -68,7 +80,7 @@ const PlaceOrderScreen = () => {
             <ListGroup.Item>
               <h2>Payment Method</h2>
               <strong>Method: </strong>
-              {cart.paymentMethod} / Mobile Money
+              {cart.paymentMethod}
               {/* {cart.paymentMethod} */}
             </ListGroup.Item>
 

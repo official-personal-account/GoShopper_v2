@@ -33,6 +33,7 @@ import ProductEditScreen from "./screens/admin/ProductEditScreen";
 import UserListScreen from "./screens/admin/UserListScreen";
 import UserEditScreen from "./screens/admin/UserEditScreen";
 import PromotionScreen from "./screens/PromotionScreen";
+import ThankYouScreen from "./screens/ThankYouScreen";
 
 // Note: React Router
 const router = createBrowserRouter(
@@ -57,6 +58,7 @@ const router = createBrowserRouter(
         <Route path="/placeorder" element={<PlaceOrderScreen />} />
         <Route path="/order/:id" element={<OrderScreen />} />
         <Route path="/profile" element={<ProfileScreen />} />
+        <Route path="/thankyou" element={<ThankYouScreen />} />
       </Route>
 
       <Route path="" element={<AdminRoute />}>

@@ -213,7 +213,7 @@ const OrderScreen = () => {
               <h2>Payment Method</h2>
               <p>
                 <strong>Method: </strong>
-                {order.paymentMethod} / Mobile Money
+                {order.paymentMethod}
                 {/* {order.paymentMethod} */}
               </p>
               {order.isPaid ? (
@@ -315,8 +315,8 @@ const OrderScreen = () => {
                     // textTransform: "uppercase",
                   }}
                 >
-                  Use "Test Pay Now" button to test payment. "Pay Now" button is
-                  a live payment button.
+                  Use "Test Pay" button to test payment. "Pay Now" button is a
+                  live payment button that triggers the payment process.
                 </p>
               </ListGroup.Item>
 
@@ -328,18 +328,22 @@ const OrderScreen = () => {
                     <Loader />
                   ) : (
                     <div>
+                      <div>
+                        <Button
+                          variant="outline-primary"
+                          onClick={onApproveTest}
+                          style={{ marginBottom: "10px" }}
+                        >
+                          <strong>Test Pay</strong>
+                        </Button>
+                      </div>
+
                       <Button
+                        variant="primary"
                         onClick={payWithPaystackHandler}
                         style={{ marginBottom: "10px" }}
                       >
                         Pay Now
-                      </Button>
-
-                      <Button
-                        onClick={onApproveTest}
-                        style={{ margin: "0 10px 10px" }}
-                      >
-                        Test Pay Now
                       </Button>
 
                       {/* <div>

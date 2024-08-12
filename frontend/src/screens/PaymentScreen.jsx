@@ -8,8 +8,8 @@ import { savePaymentMethod } from "../slices/cartSlice";
 
 const PaymentScreen = () => {
   // const [paymentMethod, setPaymentMethod] = useState("PayPal");
-  const [paymentMethod, setPaymentMethod] = useState("Card");
-  // console.log(paymentMethod);
+  const [paymentMethod, setPaymentMethod] = useState("");
+  console.log({ paymentMethod: paymentMethod });
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -41,13 +41,26 @@ const PaymentScreen = () => {
               type="radio"
               className="my-2"
               label="Card / Mobile Money"
-              id="Card"
+              id="card-or-momo"
               name="paymentMethod"
-              value="Card"
-              checked
+              value="Card / Mobile Money"
+              // checked
+              required
               onChange={(event) => {
                 setPaymentMethod(event.target.value);
               }}
+            ></Form.Check>
+          </Col>
+
+          <Col>
+            <Form.Check
+              type="radio"
+              className="my-2"
+              label="Cash On Delivery"
+              id="cash-on-delivery"
+              name="paymentMethod"
+              value="Cash On Delivery"
+              onChange={(event) => setPaymentMethod(event.target.value)}
             ></Form.Check>
           </Col>
 
@@ -60,18 +73,6 @@ const PaymentScreen = () => {
               name="paymentMethod"
               value="PayPal"
               checked
-              onChange={(event) => setPaymentMethod(event.target.value)}
-            ></Form.Check>
-          </Col> */}
-
-          {/* <Col>
-            <Form.Check
-              type="radio"
-              className="my-2"
-              label="Mobile Money"
-              id="mobileMoney"
-              name="paymentMethod"
-              value="Mobile Money"
               onChange={(event) => setPaymentMethod(event.target.value)}
             ></Form.Check>
           </Col> */}

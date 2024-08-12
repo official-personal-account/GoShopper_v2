@@ -28,7 +28,7 @@ const PromotionScreen = () => {
               in, in order to complete a test order, use any of the emails
               provided below or register to create your own.{" "}
               <strong>
-                To test payment, use the "Test Pay Now" button, as it does not
+                To test payment, use the "Test Pay" button, as it does not
                 trigger actual payment process.
               </strong>{" "}
               The "Pay Now" button is a live payment button.

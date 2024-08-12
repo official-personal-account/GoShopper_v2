@@ -10,7 +10,6 @@ import {
   initializeTrans,
   getAccessCode,
   getReferenceCode,
-  setOrderIdAsReference,
 } from "../controllers/orderController.js";
 import { protect, admin } from "../middleware/authMiddleware.js";
 
@@ -31,7 +30,6 @@ router.route("/:id/deliver").put(protect, admin, updateOrderToDelivered);
 router.route("/:id/initiateTransaction").post(protect, initializeTrans);
 router.route("/:id/getcode").get(protect, getAccessCode);
 router.route("/:id/getreference").get(protect, admin, getReferenceCode);
-router.route("/:id/setref").post(protect, setOrderIdAsReference);
 router.route("/paystackWebhook").post(addWebHook); // webhook route: event data received from paystack on this route
 
 export default router;

@@ -8,16 +8,16 @@ export const updateCart = (state) => {
     state.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
 
-  // // Note: FOR LIVE USE: Calculate shipping price (if order is over ₵100 then free, else ₵10 shipping)
+  // // Note: FOR PRODUCTION MODE: Calculate shipping price (if order is over ₵100 then free, else ₵10 shipping)
   // state.shippingPrice = addDecimals(state.itemsPrice > 100 ? 0 : 10);
 
-  // // Note: FOR LIVE USE: Calculate tax price (15% tax)
+  // // Note: FOR PRODUCTION MODE: Calculate tax price (15% tax)
   // state.taxPrice = addDecimals(Number((0.15 * state.itemsPrice).toFixed(2)));
 
-  // Note: FOR LIVE TEST USE: Calculate shipping price (if order is over ₵100 then free, else ₵10 shipping)
+  // Note: FOR DEVELOPMENT & TEST MODE: Calculate shipping price (if order is over ₵100 then free, else ₵10 shipping)
   state.shippingPrice = addDecimals(state.itemsPrice > 100 ? 0 : 0.1);
 
-  // Note: FOR LIVE TEST USE: Calculate tax price (15% tax)
+  // Note: FOR DEVELOPMENT & TEST MODE: Calculate tax price (15% tax)
   state.taxPrice = addDecimals(Number((0.01 * state.itemsPrice).toFixed(2)));
 
   // Calculate total price

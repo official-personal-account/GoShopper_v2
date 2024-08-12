@@ -7,14 +7,14 @@ export function calcPrices(orderItems) {
   const itemsPrice = addDecimals(
     orderItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
-  // // Note: FOR LIVE USE - Calculate the shipping price
+  // // Note: FOR PRODUCTION MODE - Calculate the shipping price
   // const shippingPrice = addDecimals(itemsPrice > 100 ? 0 : 10);
-  // // Note: FOR LIVE USE - Calculate the tax price
+  // // Note: FOR PRODUCTION MODE - Calculate the tax price
   // const taxPrice = addDecimals(Number((0.15 * itemsPrice).toFixed(2)));
 
-  // Note: FOR LIVE TEST USE - Calculate the shipping price
+  // Note: FOR DEVELOPMENT & TEST MODE - Calculate the shipping price
   const shippingPrice = addDecimals(itemsPrice > 100 ? 0 : 0.1);
-  // Note: FOR LIVE TEST USE - Calculate the tax price
+  // Note: FOR DEVELOPMENT & TEST MODE - Calculate the tax price
   const taxPrice = addDecimals(Number((0.01 * itemsPrice).toFixed(2)));
 
   // Calculate the total price

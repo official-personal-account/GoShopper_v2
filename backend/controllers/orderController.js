@@ -219,21 +219,6 @@ const getReferenceCode = asyncHandler(async (req, res) => {
 });
 
 // NOTE:
-// @desc            Set orderId as reference
-// @route           GET /api/orders/setref
-// @access          Private/Admin
-const setOrderIdAsReference = asyncHandler(async (req, res) => {
-  let orderId = req.params.id; // Note: 2nd way to get id: let { id } = req.params;
-
-  const order = await Order.findById(orderId);
-
-  order.reference = order._id;
-  const updatedOrder = await order.save();
-
-  res.status(200).json(updatedOrder);
-});
-
-// NOTE:
 // @desc            Initiate Paystack Payment
 // @route           GET /api/orders/:id/initiateTransaction
 // @access          Private
@@ -419,5 +404,4 @@ export {
   verifyTrans,
   getAccessCode,
   getReferenceCode,
-  setOrderIdAsReference,
 };
