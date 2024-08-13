@@ -149,9 +149,12 @@ const PromotionScreen = () => {
               </span>
             </p>
             <p>
-              <strong>Bonus:</strong> Free domain + 1 month free digital ad
-              service to help drive traffic from social media, Google & across
-              the web, to your online store
+              <strong>Bonus:</strong> Free domain
+            </p>
+            <p>
+              <strong>Digital marketing service:</strong> Innosol also provide
+              digital marketing services to help drive traffic from social
+              media, Google & across the web, to your online store
             </p>
           </Card>
         </Col>
