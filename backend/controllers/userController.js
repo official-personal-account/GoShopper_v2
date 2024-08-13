@@ -186,6 +186,7 @@ const updateUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id);
 
   if (user) {
+    // Note: ifelse statement to be removed in deployment
     if (
       user.email === "jane@email.com" ||
       user.email === "john@email.com" ||

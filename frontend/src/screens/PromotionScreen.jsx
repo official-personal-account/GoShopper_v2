@@ -51,7 +51,7 @@ const PromotionScreen = () => {
               <br />{" "}
               <span style={{ marginLeft: "15px" }}> - myadmin@email.com</span>
               <br />
-              <strong>Password: </strong>123456
+              <strong>Password: </strong>testuser123
               <br />
               <strong>Video Demo:</strong>
               <br />{" "}
