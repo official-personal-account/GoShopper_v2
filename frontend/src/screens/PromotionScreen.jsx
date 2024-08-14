@@ -56,13 +56,13 @@ const PromotionScreen = () => {
               <strong>Video Demo:</strong>
               <br />{" "}
               <span style={{ marginLeft: "15px" }}>
-                <a href="https://drive.google.com/file/d/1-lKKZ3BRwpVb_6fzMR-r0I8p3AF3MYBT/view?usp=drive_link">
+                <a href="https://drive.google.com/file/d/114Mmmp6O12azG-WFZoIIrhP6Pb3eTHzk/view?usp=sharing">
                   Video 1
                 </a>
               </span>
               <br />
               <span style={{ marginLeft: "15px" }}>
-                <a href="https://drive.google.com/file/d/1-qUgbeEESHoboU37ZM4Ozx4vvPQN78W4/view?usp=drive_link">
+                <a href="https://drive.google.com/file/d/114ix7nW9bWWvrH2sq8MaytOUkkUt3Xgv/view?usp=sharing">
                   Video 2
                 </a>
               </span>
