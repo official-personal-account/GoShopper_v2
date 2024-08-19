@@ -120,7 +120,11 @@ const PromotionScreen = () => {
           <Card className="p-4 m-3">
             <h2>Pricing (GHS)</h2>
             <p>
-              <span>1st year: 88/mo (paid for full year)</span>{" "}
+              <strong>1st year: </strong>
+              <br />
+              <span style={{ marginLeft: "15px" }}>
+                - 88/mo (paid for full year)
+              </span>
             </p>
             <p>
               <strong>Renews at:</strong>
