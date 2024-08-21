@@ -23,6 +23,8 @@
 - "Test Pay Now" button
 - "Use test pay button..." notice
 
+6. Change WhatsApp contact in "LoginScreen.jsx" file to that of client
+
 ## IN DEVELOPMENT / TEST MODE
 
 1. Turn on fields labeled for "FOR DEVELOPMENT & TEST MODE" in:
