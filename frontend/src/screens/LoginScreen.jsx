@@ -43,6 +43,22 @@ const LoginScreen = () => {
   return (
     <FormContainer>
       <h1>Sign In</h1>
+      <Row className="pt-3">
+        <p
+          style={{
+            fontSize: "x-small",
+            fontWeight: "bold",
+            letterSpacing: "1px",
+            textTransform: "uppercase",
+          }}
+        >
+          If you'd like to rather complete your order offline, screen shoot the
+          product &{" "}
+          <a href="https://wa.me/233272083116" target="__blank">
+            send to our WhatsApp
+          </a>
+        </p>
+      </Row>
 
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="email" className="my-3">
