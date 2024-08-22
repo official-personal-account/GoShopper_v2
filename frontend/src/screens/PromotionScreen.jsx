@@ -20,7 +20,7 @@ const PromotionScreen = () => {
               money or card, or select a cash-on-delivery payment option, or
               even complete their order offline.
             </p>
-            <h6>If you are a small business owner</h6>
+            <h5>If you are a small business owner</h5>
             <p>
               Proshopper saves you time, and allows you to focus on other
               things, whiles still selling. On the digital store, every product
@@ -31,7 +31,7 @@ const PromotionScreen = () => {
               in other things{" "}
             </p>
 
-            <h6>Proshopper video demo</h6>
+            <h5>Proshopper video demo</h5>
             <p>
               Watch a live recorded video demo of proshopper in the sequence it
               was labelled.
@@ -49,15 +49,13 @@ const PromotionScreen = () => {
               </span>
             </p>
 
-            <h6>Testing & Exploring Proshopper</h6>
+            <h5>Testing & Exploring Proshopper</h5>
             <p>
               Where required to log in, in order to complete an order, use any
-              of the emails provided below, or register to create your own.{" "}
-              <strong>
-                To test payment, use the "Test Pay" button, as it does not
-                trigger actual payment process.
-              </strong>{" "}
-              The "Pay Now" button is a live payment button.
+              of the emails provided below, or register to create your own. To
+              test payment, use the <strong>"Test Pay"</strong> button, as it
+              does not trigger actual payment process. The{" "}
+              <strong>"Pay Now"</strong> button is a live payment button.
               <br />
               <strong>Ordinary user:</strong>
               <br />
