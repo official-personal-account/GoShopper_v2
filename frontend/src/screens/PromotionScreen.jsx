@@ -12,16 +12,18 @@ const PromotionScreen = () => {
           <Card className="p-4 m-3">
             <h2>Why Proshopper?</h2>
             <p>
-              *Proshopper* is easy to use & fully customizable. It can be
-              accessed on mobile & PC, and developed for businesses that want to
-              have their own ecommerce platform. With proshopper, customers can
-              order & pay with mobile money or card, or opt to pay cash on
-              delivery. Because every product on your online store has the
+              *Proshopper* is an affordable & easy-to-use digital store for
+              businesses that want to have their own ecommerce platform. It is
+              accessible on mobile & PC, and can be used by food vendors or
+              anyone selling products of any kind. With proshopper, customers
+              can order & pay with mobile money or card, or select a
+              cash-on-delivery payment option, or even complete their order
+              offline. Because every product on your digital store has the
               relevant product info, and *Proshopper* itself guides the customer
               through the order process, there is minimal interaction between
-              you and the customer, before or during the order process. This
-              saves you time, and allows you to focus on other things, whiles
-              still selling.{" "}
+              you and the customer, before or during the order process. For a
+              small business owner, this saves you time, and allows you to focus
+              on other things, whiles still selling.{" "}
             </p>
             <p>
               Watch a live recorded video demo below, in the sequence it was
@@ -70,7 +72,7 @@ const PromotionScreen = () => {
           </Card>
         </Col>
 
-        <Col md={6}>
+        {/* <Col md={6}>
           <Card className="p-4 m-3">
             <h2>How to take part in the promo challenge</h2>
             <p>
@@ -114,7 +116,7 @@ const PromotionScreen = () => {
               free!
             </p>
           </Card>
-        </Col>
+        </Col> */}
 
         <Col md={6}>
           <Card className="p-4 m-3">
