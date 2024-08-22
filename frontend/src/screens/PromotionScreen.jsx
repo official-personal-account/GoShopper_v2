@@ -12,24 +12,47 @@ const PromotionScreen = () => {
           <Card className="p-4 m-3">
             <h2>Why Proshopper?</h2>
             <p>
-              *Proshopper* is an affordable & easy-to-use digital store for
-              businesses that want to have their own ecommerce platform. It is
-              accessible on mobile & PC, and can be used by food vendors or
-              anyone selling products of any kind. With proshopper, customers
-              can order & pay with mobile money or card, or select a
-              cash-on-delivery payment option, or even complete their order
-              offline. Because every product on your digital store has the
-              relevant product info, and *Proshopper* itself guides the customer
-              through the order process, there is minimal interaction between
-              you and the customer, before or during the order process. For a
-              small business owner, this saves you time, and allows you to focus
-              on other things, whiles still selling.{" "}
+              *Proshopper* is an easy-to-use digital store, accessible on mobile
+              & PC. It is built for businesses that want to have their own
+              ecommerce platform, but are confronted with the high cost of
+              procuring/maintaning one. With proshopper deployed for you,
+              customers can order from your digital store & pay with mobile
+              money or card, or select a cash-on-delivery payment option, or
+              even complete their order offline.
             </p>
+            <h6>If you are a small business owner</h6>
             <p>
-              Watch a live recorded video demo below, in the sequence it was
-              labelled, or explore Proshopper by yourself. Where required to log
-              in, in order to complete a test order, use any of the emails
-              provided below or register to create your own.{" "}
+              Proshopper saves you time, and allows you to focus on other
+              things, whiles still selling. On the digital store, every product
+              has the relevant product info. *Proshopper* itself, guides the
+              customer through each stage of the order process. As a result,
+              there is minimal interaction between you and the customer, before
+              or during the order process, allowing you some free time to engage
+              in other things{" "}
+            </p>
+
+            <h6>Proshopper video demo</h6>
+            <p>
+              Watch a live recorded video demo of proshopper in the sequence it
+              was labelled.
+              <br />{" "}
+              <span style={{ marginLeft: "15px" }}>
+                <a href="https://drive.google.com/file/d/114Mmmp6O12azG-WFZoIIrhP6Pb3eTHzk/view?usp=sharing">
+                  Video demo 1
+                </a>
+              </span>
+              <br />
+              <span style={{ marginLeft: "15px" }}>
+                <a href="https://drive.google.com/file/d/114ix7nW9bWWvrH2sq8MaytOUkkUt3Xgv/view?usp=sharing">
+                  Video demo 2
+                </a>
+              </span>
+            </p>
+
+            <h6>Testing & Exploring Proshopper</h6>
+            <p>
+              Where required to log in, in order to complete an order, use any
+              of the emails provided below, or register to create your own.{" "}
               <strong>
                 To test payment, use the "Test Pay" button, as it does not
                 trigger actual payment process.
@@ -55,19 +78,6 @@ const PromotionScreen = () => {
               <br />
               <strong>Password: </strong>testuser123
               <br />
-              <strong>Video Demo:</strong>
-              <br />{" "}
-              <span style={{ marginLeft: "15px" }}>
-                <a href="https://drive.google.com/file/d/114Mmmp6O12azG-WFZoIIrhP6Pb3eTHzk/view?usp=sharing">
-                  Video 1
-                </a>
-              </span>
-              <br />
-              <span style={{ marginLeft: "15px" }}>
-                <a href="https://drive.google.com/file/d/114ix7nW9bWWvrH2sq8MaytOUkkUt3Xgv/view?usp=sharing">
-                  Video 2
-                </a>
-              </span>
             </p>
           </Card>
         </Col>
