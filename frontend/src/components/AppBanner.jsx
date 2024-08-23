@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const PromotionBanner = () => {
+const AppBanner = () => {
   return (
     <div
       style={{
@@ -19,4 +19,4 @@ const PromotionBanner = () => {
   );
 };
 
-export default PromotionBanner;
+export default AppBanner;

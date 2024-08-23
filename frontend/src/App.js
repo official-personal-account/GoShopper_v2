@@ -5,14 +5,14 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Header from "./components/Header";
-import PromotionBanner from "./components/PromotionBanner";
+import AppBanner from "./components/AppBanner";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Header />
-      <PromotionBanner />
+      <AppBanner />
       <main className="py-3 body-colour">
         <Container>
           <Outlet />
