@@ -132,35 +132,35 @@ const PromotionScreen = () => {
             <p>
               <strong>1st year: </strong>
               <br />
-              <span style={{ marginLeft: "15px" }}>
-                - 88/mo (paid for full year)
-              </span>
+              <span style={{ marginLeft: "15px" }}>- Monthly payment: 225</span>
+              <br />
+              <span style={{ marginLeft: "15px" }}>- 1,560/year</span>
             </p>
             <p>
-              <strong>Renews at:</strong>
+              <strong>After 1st year:</strong>
               <br />{" "}
               <span style={{ marginLeft: "15px" }}>
                 - Monthly payment: 225
               </span>{" "}
               <br />{" "}
               <span style={{ marginLeft: "15px" }}>
-                - 1 year payment: 175/mo
+                - 1 year payment: 2,100
               </span>
               <br />
               <span style={{ marginLeft: "15px" }}>
-                - 2 year payment: 163/mo
+                - 2 year payment: 3,912
               </span>
               <br />
               <span style={{ marginLeft: "15px" }}>
-                - 3 year payment: 151/mo
+                - 3 year payment: 5,436
               </span>
               <br />
               <span style={{ marginLeft: "15px" }}>
-                - 4 year payment: 139/mo
+                - 4 year payment: 6,672
               </span>
               <br />
               <span style={{ marginLeft: "15px" }}>
-                - 5 year payment: 127/mo
+                - 5 year payment: 7,620
               </span>
             </p>
             <p>
