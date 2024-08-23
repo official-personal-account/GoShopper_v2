@@ -1,29 +1,34 @@
 ## IN PRODUCTION MODE
 
-1. Turn on fields labeled for "FOR PRODUCTION MODE" & set "shipping price" & "tax price" in:
+1. 8. Create a copy of Proshopper for client in github
+2. Turn on fields labeled for "FOR PRODUCTION MODE" & set "shipping price" & "tax price" in:
 
 - cartUtils.js
 - calcPrices.js
 
-2. Turn on code with label "For live mode" in:
+3. Turn on code with label "For live mode" in:
 
 - webhookHelper.js
 - orderController.js
 
-3. Allow & remove "Test User & Product" data to be deleted
+4. Allow & remove "Test User & Product" data to be deleted
    To do: Search "ifelse statement to be removed in deployment" in the below files, to find relevant code to remove
 
 - userController.js
 - productController.js
 
-4. Add webhook URL in paystack account.
+5. Add webhook URL in paystack account.
 
-5. Remove from OrderScreen.jsx:
+6. Remove from OrderScreen.jsx:
 
 - "Test Pay Now" button
 - "Use test pay button..." notice
 
-6. Change WhatsApp contact in "LoginScreen.jsx" file to that of client
+7. Change WhatsApp contact in "LoginScreen.jsx" file to that of client
+
+8. Create database for client in my account
+
+9. Create a render account for client
 
 ## IN DEVELOPMENT / TEST MODE
 
