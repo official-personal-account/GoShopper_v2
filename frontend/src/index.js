@@ -32,7 +32,7 @@ import ProductListScreen from "./screens/admin/ProductListScreen";
 import ProductEditScreen from "./screens/admin/ProductEditScreen";
 import UserListScreen from "./screens/admin/UserListScreen";
 import UserEditScreen from "./screens/admin/UserEditScreen";
-import PromotionScreen from "./screens/PromotionScreen";
+import InfoScreen from "./screens/InfoScreen";
 import ThankYouScreen from "./screens/ThankYouScreen";
 
 // Note: React Router
@@ -48,7 +48,7 @@ const router = createBrowserRouter(
       />
       <Route path="/product/:id" element={<ProductScreen />} />
       <Route path="/cart" element={<CartScreen />} />
-      <Route path="/promotion" element={<PromotionScreen />} />
+      <Route path="/info" element={<InfoScreen />} />
       <Route path="/login" element={<LoginScreen />} />
       <Route path="/register" element={<RegisterScreen />} />
 

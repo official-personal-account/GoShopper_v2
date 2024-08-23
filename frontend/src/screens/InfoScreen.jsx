@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Row, Col, Card } from "react-bootstrap";
 
-const PromotionScreen = () => {
+const InfoScreen = () => {
   return (
     <>
       <Link className="btn btn-secondary my-3" to={"/"}>
@@ -178,4 +178,4 @@ const PromotionScreen = () => {
   );
 };
 
-export default PromotionScreen;
+export default InfoScreen;
