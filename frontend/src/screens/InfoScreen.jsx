@@ -28,7 +28,7 @@ const InfoScreen = () => {
               customer through each stage of the order process. As a result,
               there is minimal interaction between you and the customer, before
               or during the order process, allowing you some free time to engage
-              in other things{" "}
+              in other things.
             </p>
 
             <h5>Proshopper video demo</h5>
@@ -168,8 +168,11 @@ const InfoScreen = () => {
             </p>
             <p>
               <strong>Digital marketing service:</strong> Innosol also provide
-              digital marketing services to help drive traffic from social
-              media, Google & across the web, to your online store
+              digital marketing services that showcases your business/product
+              ads on social media, in websites, in apps, or on Youtube. People
+              who see your business/product ad and tap/click on it, are taken to
+              your digital store. In essence, the digital marketing helps drive
+              traffic from across the web, to your digital store.
             </p>
           </Card>
         </Col>
