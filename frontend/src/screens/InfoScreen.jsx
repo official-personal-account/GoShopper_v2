@@ -20,6 +20,8 @@ const InfoScreen = () => {
               money or card, or select a cash-on-delivery payment option, or
               even complete their order offline.
             </p>
+
+            <br />
             <h5>If you are a small business owner</h5>
             <p>
               Proshopper saves you time, and allows you to focus on other
@@ -31,6 +33,7 @@ const InfoScreen = () => {
               in other things.
             </p>
 
+            <br />
             <h5>Proshopper video demo</h5>
             <p>
               Watch a live recorded video demo of proshopper in the sequence it
@@ -49,6 +52,7 @@ const InfoScreen = () => {
               </span>
             </p>
 
+            <br />
             <h5>Testing & Exploring Proshopper</h5>
             <p>
               Where required to log in, in order to complete an order, use any
