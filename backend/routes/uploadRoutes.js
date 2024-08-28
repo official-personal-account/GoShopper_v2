@@ -26,7 +26,7 @@ function fileFilter(req, file, cb) {
   if (extname && mimetype) {
     cb(null, true);
   } else {
-    cb(new Error("Images only! Check upload."), false);
+    cb(new Error("Only images can be uploaded"), false);
   }
 }
 

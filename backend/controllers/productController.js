@@ -19,7 +19,7 @@ const getProducts = asyncHandler(async (req, res) => {
   const products = await Product.find({ ...keyword })
     .sort({ createdAt: "desc" })
     .limit(pageSize)
-    .skip(pageSize * (page - 1));
+    .skip(pageSize * (page - 1)); // minus 1 means: except the one page we are on, exclude every page we do not want.
   res.json({ products, page, pages: Math.ceil(count / pageSize) });
 });
 
