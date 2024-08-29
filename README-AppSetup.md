@@ -30,6 +30,8 @@
 
 9. Create a render account for client
 
+10. Change Logo & favicon
+
 ## IN DEVELOPMENT / TEST MODE
 
 1. Turn on fields labeled for "FOR DEVELOPMENT & TEST MODE" in:

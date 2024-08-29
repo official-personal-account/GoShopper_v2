@@ -72,10 +72,19 @@ const addOrderItems = asyncHandler(async (req, res) => {
 // @route           GET /api/orders/myorders
 // @access          Private
 const getMyOrders = asyncHandler(async (req, res) => {
-  const orders = await Order.find({ user: req.user._id }).sort({
-    createdAt: "desc",
-  });
-  res.status(200).json(orders);
+  const pageSize = process.env.PAGINATION_LIMIT;
+  const page = Number(req.query.pageNumber) || 1;
+
+  const count = await Order.countDocuments({ user: req.user._id });
+
+  const orders = await Order.find({ user: req.user._id })
+    .sort({
+      createdAt: "desc",
+    })
+    .limit(pageSize)
+    .skip(pageSize * (page - 1));
+
+  res.status(200).json({ orders, page, pages: Math.ceil(count / pageSize) });
 });
 
 // NOTE:
@@ -184,10 +193,19 @@ const updateOrderToDelivered = asyncHandler(async (req, res) => {
 // @route           GET /api/orders/
 // @access          Private/Admin
 const getOrders = asyncHandler(async (req, res) => {
+  const pageSize = process.env.PAGINATION_LIMIT;
+  const page = Number(req.query.pageNumber) || 1;
+  const count = await Order.countDocuments();
+  // const pages = Math.ceil(count / pageSize);
+
   const orders = await Order.find({})
     .sort({ createdAt: "desc" })
-    .populate("user", "id name");
-  res.status(200).json(orders);
+    .populate("user", "id name")
+    .limit(pageSize)
+    .skip(pageSize * (page - 1));
+
+  // console.log({ pageSize: pageSize, count: count, pages: pages });
+  res.status(200).json({ orders, page, pages: Math.ceil(count / pageSize) });
 });
 
 // NOTE:

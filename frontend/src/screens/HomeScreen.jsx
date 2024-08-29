@@ -1,5 +1,5 @@
 import { Row, Col } from "react-bootstrap";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import Product from "../components/Product";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
@@ -11,6 +11,7 @@ import Meta from "../components/Meta";
 
 const HomeScreen = () => {
   const { keyword, pageNumber } = useParams();
+  const url = useLocation();
   const { data, isLoading, error } = useGetProductsQuery({
     keyword,
     pageNumber,
@@ -56,6 +57,7 @@ const HomeScreen = () => {
           <Paginate
             pages={data.pages}
             page={data.page}
+            url={url}
             keyword={keyword ? keyword : ""}
           />
         </>

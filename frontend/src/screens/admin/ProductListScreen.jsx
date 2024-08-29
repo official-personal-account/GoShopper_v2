@@ -1,7 +1,7 @@
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button, Row, Col } from "react-bootstrap";
 import { FaEdit, FaTrash } from "react-icons/fa";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import Message from "../../components/Message";
 import Loader from "../../components/Loader";
 import { toast } from "react-toastify";
@@ -13,6 +13,7 @@ import {
 import Paginate from "../../components/Paginate";
 
 const ProductListScreen = () => {
+  const url = useLocation();
   const { pageNumber } = useParams();
 
   const { data, isLoading, error, refetch } = useGetProductsQuery({
@@ -111,7 +112,13 @@ const ProductListScreen = () => {
               ))}
             </tbody>
           </Table>
-          Page <Paginate pages={data.pages} page={data.page} isAdmin={true} />
+          Page{" "}
+          <Paginate
+            pages={data.pages}
+            page={data.page}
+            url={url}
+            isAdmin={true}
+          />
         </>
       )}
     </>
