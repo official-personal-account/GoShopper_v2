@@ -139,6 +139,7 @@ const InfoScreen = () => {
               <span style={{ marginLeft: "15px" }}>
                 - 1 year payment: 2,100
               </span>
+              <br />
               <span style={{ marginLeft: "15px" }}>
                 - 2 year payment: 3,912
               </span>
@@ -184,17 +185,15 @@ const InfoScreen = () => {
             </p> */}
             <p>
               <strong>Bonus:</strong>
+              <br />
               <span style={{ marginLeft: "15px" }}>- Free domain</span>
               <br />
               <span style={{ marginLeft: "15px" }}>
-                - 1 month free digital marketing service:
-                <span style={{ marginLeft: "15px" }}>
-                  showcases your business/product ads on social media, in
-                  websites, in apps, or on Youtube. People who see your
-                  business/product ad and tap/click on it, are directed to your
-                  digital store, helping you drive traffic from across the web,
-                  to your digital store
-                </span>
+                - 1 month free digital marketing service: showcases your
+                business/product ads on social media, in websites, in apps, or
+                on Youtube. People who see your business/product ad and
+                tap/click on it, are directed to your digital store, helping you
+                drive traffic from across the web, to your digital store
               </span>
             </p>
           </Card>
