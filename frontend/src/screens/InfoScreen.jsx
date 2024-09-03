@@ -134,15 +134,28 @@ const InfoScreen = () => {
           <Card className="p-4 m-3">
             <h2>Pricing (GHS)</h2>
             <p>
-              <strong>1st year: </strong>
-              <br />
               <span style={{ marginLeft: "15px" }}>- Monthly payment: 225</span>
               <br />
               <span style={{ marginLeft: "15px" }}>
-                - 1 year payment: 1,560
+                - 1 year payment: 2,100
+              </span>
+              <span style={{ marginLeft: "15px" }}>
+                - 2 year payment: 3,912
+              </span>
+              <br />
+              <span style={{ marginLeft: "15px" }}>
+                - 3 year payment: 5,436
+              </span>
+              <br />
+              <span style={{ marginLeft: "15px" }}>
+                - 4 year payment: 6,672
+              </span>
+              <br />
+              <span style={{ marginLeft: "15px" }}>
+                - 5 year payment: 7,620
               </span>
             </p>
-            <p>
+            {/* <p>
               <strong>After 1st year:</strong>
               <br />{" "}
               <span style={{ marginLeft: "15px" }}>
@@ -168,17 +181,21 @@ const InfoScreen = () => {
               <span style={{ marginLeft: "15px" }}>
                 - 5 year payment: 7,620
               </span>
-            </p>
+            </p> */}
             <p>
-              <strong>Bonus:</strong> Free domain
-            </p>
-            <p>
-              <strong>Digital marketing service:</strong> Innosol also provide
-              digital marketing services that showcases your business/product
-              ads on social media, in websites, in apps, or on Youtube. People
-              who see your business/product ad and tap/click on it, are taken to
-              your digital store. In essence, the digital marketing helps drive
-              traffic from across the web, to your digital store.
+              <strong>Bonus:</strong>
+              <span style={{ marginLeft: "15px" }}>- Free domain</span>
+              <br />
+              <span style={{ marginLeft: "15px" }}>
+                - 1 month free digital marketing service:
+                <span style={{ marginLeft: "15px" }}>
+                  showcases your business/product ads on social media, in
+                  websites, in apps, or on Youtube. People who see your
+                  business/product ad and tap/click on it, are directed to your
+                  digital store, helping you drive traffic from across the web,
+                  to your digital store
+                </span>
+              </span>
             </p>
           </Card>
         </Col>
