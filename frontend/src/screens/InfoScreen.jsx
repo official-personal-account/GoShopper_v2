@@ -134,8 +134,8 @@ const InfoScreen = () => {
           <Card className="p-4 m-3">
             <h2>Pricing (GHS)</h2>
             <p>
-              <span style={{ marginLeft: "15px" }}>- Monthly payment: 225</span>
-              <br />
+              {/* <span style={{ }}>- Monthly payment: 225</span>
+              <br /> */}
               <span style={{}}>- 1 year payment: 2,100</span>
               <br />
               <span style={{}}>- 2 year payment: 3,912</span>
