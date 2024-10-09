@@ -36,8 +36,8 @@ const InfoScreen = () => {
             <br />
             <h5>Proshopper video demo</h5>
             <p>
-              Watch a live recorded video demo of proshopper in the sequence it
-              was labelled.
+              Watch a live recorded video demo of how proshopper works. Start
+              with demo 1.
               <br />{" "}
               <span style={{ marginLeft: "15px" }}>
                 <a href="https://drive.google.com/file/d/114Mmmp6O12azG-WFZoIIrhP6Pb3eTHzk/view?usp=sharing">
@@ -55,11 +55,8 @@ const InfoScreen = () => {
             <br />
             <h5>Testing & Exploring Proshopper</h5>
             <p>
-              Where required to log in, in order to complete an order, use any
-              of the emails provided below, or register to create your own. To
-              test payment, use the <strong>"Test Pay"</strong> button, as it
-              does not trigger actual payment process. The{" "}
-              <strong>"Pay Now"</strong> button is a live payment button.
+              Use any of the credentials below to sign in & explore how the
+              system works, where sign-in is required.
               <br />
               <strong>Ordinary user:</strong>
               <br />
