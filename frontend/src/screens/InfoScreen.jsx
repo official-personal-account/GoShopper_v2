@@ -133,20 +133,20 @@ const InfoScreen = () => {
             <p>
               {/* <span style={{ }}>- Monthly payment: 225</span>
               <br /> */}
-              <span style={{}}>- 1 year payment: 2,100</span>
+              <span style={{}}>- 1 year: 2,100</span>
               <br />
-              <span style={{}}>- 2 year payment: 3,912</span>
+              <span style={{}}>- 2 year: 3,912</span>
               <br />
-              <span style={{}}>- 3 year payment: 5,436</span>
+              <span style={{}}>- 3 year: 5,436</span>
               <br />
-              <span style={{}}>- 4 year payment: 6,672</span>
+              <span style={{}}>- 4 year: 6,672</span>
               <br />
-              <span style={{}}>- 5 year payment: 7,620</span>
+              <span style={{}}>- 5 year: 7,620</span>
             </p>
             <p>
               <strong>Note: </strong>Installment payment arrangement is
-              available for all pricing plans, where you pay Ghs350 monthly,
-              till the full price is paid.
+              available for all pricing plans, allowing you to pay Ghs350
+              monthly, till the full price is paid.
             </p>
             <p>
               <strong>Bonus:</strong>
