@@ -146,33 +146,11 @@ const InfoScreen = () => {
               <br />
               <span style={{}}>- 5 year payment: 7,620</span>
             </p>
-            {/* <p>
-              <strong>After 1st year:</strong>
-              <br />{" "}
-              <span style={{ marginLeft: "15px" }}>
-                - Monthly payment: 225
-              </span>{" "}
-              <br />{" "}
-              <span style={{ marginLeft: "15px" }}>
-                - 1 year payment: 2,100
-              </span>
-              <br />
-              <span style={{ marginLeft: "15px" }}>
-                - 2 year payment: 3,912
-              </span>
-              <br />
-              <span style={{ marginLeft: "15px" }}>
-                - 3 year payment: 5,436
-              </span>
-              <br />
-              <span style={{ marginLeft: "15px" }}>
-                - 4 year payment: 6,672
-              </span>
-              <br />
-              <span style={{ marginLeft: "15px" }}>
-                - 5 year payment: 7,620
-              </span>
-            </p> */}
+            <p>
+              <strong>Note: </strong>Installment payment arrangement is
+              available for all pricing plans, where you pay Ghs350 monthly,
+              till the full price is paid.
+            </p>
             <p>
               <strong>Bonus:</strong>
               <br />
