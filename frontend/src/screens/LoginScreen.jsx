@@ -83,6 +83,8 @@ const LoginScreen = () => {
         </Col>
       </Row>
 
+      <hr />
+
       <Row className="pt-3">
         <p
           style={{
