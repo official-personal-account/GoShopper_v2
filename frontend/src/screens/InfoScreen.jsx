@@ -12,13 +12,22 @@ const InfoScreen = () => {
           <Card className="p-4 m-3">
             <h2>Why Proshopper?</h2>
             <p>
-              *Proshopper* is an easy-to-use digital store, accessible on mobile
-              & PC. It is built for businesses that want to have their own
-              ecommerce platform, but are confronted with the high cost of
-              procuring/maintaning one. With proshopper deployed for you,
-              customers can order from your digital store & pay with mobile
-              money or card, or select a cash-on-delivery payment option, or
-              even complete their order offline.
+              *Proshopper* is an ecommerce platform that can be customized to
+              your needs:
+            </p>
+            <p>
+              <span style={{}}>
+                - Allows customers to order & pay you with mobile money or card
+                from anywhere
+              </span>
+              <br />
+              <span style={{}}>
+                - Has a cash-on-delivery payment option feature
+              </span>
+              <br />
+              <span style={{}}>- Easy to use & accessible on mobile & PC</span>
+              <br />
+              <span style={{}}>- or even complete their order offline</span>
             </p>
 
             <br />
@@ -135,18 +144,18 @@ const InfoScreen = () => {
               <br /> */}
               <span style={{}}>- 1 year: 2,100</span>
               <br />
-              <span style={{}}>- 2 year: 3,912</span>
+              <span style={{}}>- 2 years: 3,912</span>
               <br />
-              <span style={{}}>- 3 year: 5,436</span>
+              <span style={{}}>- 3 years: 5,436</span>
               <br />
-              <span style={{}}>- 4 year: 6,672</span>
+              <span style={{}}>- 4 years: 6,672</span>
               <br />
-              <span style={{}}>- 5 year: 7,620</span>
+              <span style={{}}>- 5 years: 7,620</span>
             </p>
             <p>
               <strong>Note: </strong>Installment payment arrangement is
-              available for all pricing plans, allowing you to pay Ghs350
-              monthly, till the full price is paid.
+              available for all pricing plans, to allow you pay as low as Ghs250
+              monthly, till you have paid the full plan price.
             </p>
             <p>
               <strong>Bonus:</strong>

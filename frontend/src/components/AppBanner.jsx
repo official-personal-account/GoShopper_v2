@@ -10,9 +10,9 @@ const AppBanner = () => {
       }}
     >
       <p style={{ fontSize: "small" }}>
-        Stand a chance to get Proshopper for free!{" "}
+        Want to learn more about Proshopper?{" "}
         <Link to="/info">
-          <span style={{ color: "blue" }}>See how</span>
+          <span style={{ color: "blue" }}>See here</span>
         </Link>
       </p>
     </div>
