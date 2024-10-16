@@ -61,7 +61,7 @@ const InfoScreen = () => {
               Watch a live recorded video demo of how proshopper works.
               <br />{" "}
               <span style={{ marginLeft: "15px" }}>
-                <a href="https://drive.google.com/file/d/114Mmmp6O12azG-WFZoIIrhP6Pb3eTHzk/view?usp=sharing">
+                <a href="https://www.facebook.com/www.innosoltechnologies.com.gh/videos/541120238872680/?app=fbl">
                   Video demo 1
                 </a>
               </span>
@@ -174,11 +174,10 @@ const InfoScreen = () => {
               </span>
               <br />
               <span style={{ marginLeft: "15px" }}>
-                <a href="https://www.facebook.com/www.innosoltechnologies.com.gh/videos/541120238872680/?app=fbl">
+                <a href="https://www.facebook.com/www.innosoltechnologies.com.gh/videos/503106595999036/?mibextid=a5VnDUpeP1iQ3q3p">
                   Video demo 1
                 </a>
               </span>
-
               <br />
               <span style={{ marginLeft: "15px" }}>
                 <a href="https://drive.google.com/file/d/1AGgxAPEo4-ep1u9mofcJBwAJLxRo9goo/view?usp=drivesdk">
