@@ -61,7 +61,7 @@ const InfoScreen = () => {
               Watch a live recorded video demo of how proshopper works.
               <br />{" "}
               <span style={{ marginLeft: "15px" }}>
-                <a href="https://www.facebook.com/www.innosoltechnologies.com.gh/videos/541120238872680/?app=fbl">
+                <a href="https://drive.google.com/file/d/1b2c-tiFIhsJIxi4kPwplUeNdYU7cwz5N/view?usp=drivesdk">
                   Video demo 1
                 </a>
               </span>
