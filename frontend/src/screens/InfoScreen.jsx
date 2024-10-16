@@ -12,8 +12,8 @@ const InfoScreen = () => {
           <Card className="p-4 m-3">
             <h2>Why Proshopper?</h2>
             <p>
-              *Proshopper* - an ecommerce platform for food, clothing & product
-              vendors.
+              Proshopper is an ecommerce platform for food, clothing & product
+              vendors looking to have their own platform.
             </p>
             <p>
               <span style={{}}>
@@ -58,18 +58,11 @@ const InfoScreen = () => {
             <br />
             <h5>Proshopper video demo</h5>
             <p>
-              Watch a live recorded video demo of how proshopper works. Start
-              with demo 1.
+              Watch a live recorded video demo of how proshopper works.
               <br />{" "}
               <span style={{ marginLeft: "15px" }}>
                 <a href="https://drive.google.com/file/d/114Mmmp6O12azG-WFZoIIrhP6Pb3eTHzk/view?usp=sharing">
                   Video demo 1
-                </a>
-              </span>
-              <br />
-              <span style={{ marginLeft: "15px" }}>
-                <a href="https://drive.google.com/file/d/114ix7nW9bWWvrH2sq8MaytOUkkUt3Xgv/view?usp=sharing">
-                  Video demo 2
                 </a>
               </span>
             </p>
@@ -177,14 +170,15 @@ const InfoScreen = () => {
               <br />
               <span style={{}}>
                 - 1 month free digital marketing service to drive traffic from
-                across the web, to your website. See video demos on this.
+                across the web to your website. See a video demo on this.
               </span>
               <br />
               <span style={{ marginLeft: "15px" }}>
-                <a href="https://www.facebook.com/www.innosoltechnologies.com.gh/videos/503106595999036/?mibextid=a5VnDUpeP1iQ3q3p">
+                <a href="https://www.facebook.com/www.innosoltechnologies.com.gh/videos/541120238872680/?app=fbl">
                   Video demo 1
                 </a>
               </span>
+
               <br />
               <span style={{ marginLeft: "15px" }}>
                 <a href="https://drive.google.com/file/d/1AGgxAPEo4-ep1u9mofcJBwAJLxRo9goo/view?usp=drivesdk">
