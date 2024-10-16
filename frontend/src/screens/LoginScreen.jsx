@@ -94,7 +94,7 @@ const LoginScreen = () => {
             textTransform: "uppercase",
           }}
         >
-          Don't want to sign in or register?{" "}
+          Don't want to sign in or register to complete your order?{" "}
           <a href="https://wa.me/233272083116" target="__blank">
             Order on WhatsApp
           </a>
