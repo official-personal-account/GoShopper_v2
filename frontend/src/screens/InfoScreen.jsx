@@ -136,19 +136,19 @@ const InfoScreen = () => {
 
         <Col md={6}>
           <Card className="p-4 m-3">
-            <h2>Pricing (GHS)</h2>
+            <h2>Price (GHS)</h2>
             <p>
               {/* <span style={{ }}>- Monthly payment: 225</span>
               <br /> */}
-              <span style={{ marginLeft: "15px" }}>- 1 year: 2,100</span>
+              <span style={{}}>- 1 year: 2,100</span>
               <br />
-              <span style={{ marginLeft: "15px" }}>- 2 years: 3,912</span>
+              <span style={{}}>- 2 years: 3,912</span>
               <br />
-              <span style={{ marginLeft: "15px" }}>- 3 years: 5,436</span>
+              <span style={{}}>- 3 years: 5,436</span>
               <br />
-              <span style={{ marginLeft: "15px" }}>- 4 years: 6,672</span>
+              <span style={{}}>- 4 years: 6,672</span>
               <br />
-              <span style={{ marginLeft: "15px" }}>- 5 years: 7,620</span>
+              <span style={{}}>- 5 years: 7,620</span>
             </p>
             <p>
               <strong>Note: </strong>Installment payment arrangement is
@@ -158,12 +158,13 @@ const InfoScreen = () => {
             <p>
               <strong>Bonus:</strong>
               <br />
-              <span style={{ marginLeft: "15px" }}>- Free domain</span>
+              <span style={{}}>- Free domain name</span>
               <br />
-              <span style={{ marginLeft: "15px" }}>
+              <span style={{}}>
                 - 1 month free digital marketing service to drive traffic from
                 across the web, to your website. See video demos on this.
               </span>
+              <br />
               <span style={{ marginLeft: "15px" }}>
                 <a href="https://www.facebook.com/www.innosoltechnologies.com.gh/videos/503106595999036/?mibextid=a5VnDUpeP1iQ3q3p">
                   Video demo 1
