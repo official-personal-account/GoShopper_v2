@@ -96,7 +96,7 @@ const LoginScreen = () => {
         >
           Don't want to sign in or register?{" "}
           <a href="https://wa.me/233272083116" target="__blank">
-            Complete your order on WhatsApp
+            Order on WhatsApp
           </a>
         </p>
       </Row>

@@ -26,8 +26,6 @@ const InfoScreen = () => {
               </span>
               <br />
               <span style={{}}>- Easy to use & accessible on mobile & PC</span>
-              <br />
-              <span style={{}}>- or even complete their order offline</span>
             </p>
 
             <br />
@@ -142,15 +140,15 @@ const InfoScreen = () => {
             <p>
               {/* <span style={{ }}>- Monthly payment: 225</span>
               <br /> */}
-              <span style={{}}>- 1 year: 2,100</span>
+              <span style={{ marginLeft: "15px" }}>- 1 year: 2,100</span>
               <br />
-              <span style={{}}>- 2 years: 3,912</span>
+              <span style={{ marginLeft: "15px" }}>- 2 years: 3,912</span>
               <br />
-              <span style={{}}>- 3 years: 5,436</span>
+              <span style={{ marginLeft: "15px" }}>- 3 years: 5,436</span>
               <br />
-              <span style={{}}>- 4 years: 6,672</span>
+              <span style={{ marginLeft: "15px" }}>- 4 years: 6,672</span>
               <br />
-              <span style={{}}>- 5 years: 7,620</span>
+              <span style={{ marginLeft: "15px" }}>- 5 years: 7,620</span>
             </p>
             <p>
               <strong>Note: </strong>Installment payment arrangement is
@@ -160,14 +158,22 @@ const InfoScreen = () => {
             <p>
               <strong>Bonus:</strong>
               <br />
-              <span style={{}}>- Free domain</span>
+              <span style={{ marginLeft: "15px" }}>- Free domain</span>
               <br />
-              <span style={{}}>
-                - 1 month free digital marketing service: showcases your
-                business/product ads on social media, in websites, in apps, or
-                on Youtube. People who see your business/product ad and
-                tap/click on it, are directed to your digital store, helping you
-                drive traffic from across the web, to your digital store
+              <span style={{ marginLeft: "15px" }}>
+                - 1 month free digital marketing service to drive traffic from
+                across the web, to your website. See video demos on this.
+              </span>
+              <span style={{ marginLeft: "15px" }}>
+                <a href="https://www.facebook.com/www.innosoltechnologies.com.gh/videos/503106595999036/?mibextid=a5VnDUpeP1iQ3q3p">
+                  Video demo 1
+                </a>
+              </span>
+              <br />
+              <span style={{ marginLeft: "15px" }}>
+                <a href="https://drive.google.com/file/d/1AGgxAPEo4-ep1u9mofcJBwAJLxRo9goo/view?usp=drivesdk">
+                  Video demo 2
+                </a>
               </span>
             </p>
           </Card>
