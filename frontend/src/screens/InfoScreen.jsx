@@ -11,6 +11,19 @@ const InfoScreen = () => {
         <Col md={6}>
           <Card className="p-4 m-3">
             <h2>Why Proshopper?</h2>
+
+            <p>
+              Watch a live recorded video demo of how proshopper works.
+              <br />{" "}
+              <span style={{ marginLeft: "15px" }}>
+                <a href="https://drive.google.com/file/d/1b2c-tiFIhsJIxi4kPwplUeNdYU7cwz5N/view?usp=drivesdk">
+                  Video demo 1
+                </a>
+              </span>
+            </p>
+
+            <br />
+
             <p>
               Proshopper is a fully customizable ecommerce platform for food,
               clothing & product vendors:
@@ -58,18 +71,7 @@ const InfoScreen = () => {
             </p>
 
             <br />
-            <h5>Proshopper video demo</h5>
-            <p>
-              Watch a live recorded video demo of how proshopper works.
-              <br />{" "}
-              <span style={{ marginLeft: "15px" }}>
-                <a href="https://drive.google.com/file/d/1b2c-tiFIhsJIxi4kPwplUeNdYU7cwz5N/view?usp=drivesdk">
-                  Video demo 1
-                </a>
-              </span>
-            </p>
 
-            <br />
             <h5>Testing & Exploring Proshopper</h5>
             <p>
               Use any of the credentials below to sign in & explore how the
