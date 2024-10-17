@@ -12,22 +12,24 @@ const InfoScreen = () => {
           <Card className="p-4 m-3">
             <h2>Why Proshopper?</h2>
             <p>
-              Proshopper is an ecommerce platform for food, clothing & product
-              vendors looking to have their own platform.
+              Proshopper is a fully customizable ecommerce platform for food,
+              clothing & product vendors:
             </p>
             <p>
               <span style={{}}>
-                <strong>1.</strong> Can be customized to your needs.
-              </span>
-              <br />
-              <span style={{}}>
-                <strong>2.</strong> Allows customers to order & pay you with
-                mobile money or card from anywhere, or select a cash-on-delivery
+                <strong>1.</strong> Allows customers to order & pay with mobile
+                money or card, from anywhere, or select a cash-on-delivery
                 payment option.
               </span>
               <br />
               <span style={{}}>
-                <strong>3.</strong> You get notified in real time, when payment
+                <strong>2.</strong> Secured by Paystack, one of Africa's leading
+                fintech and a subsidiary of Stripe (a leading Global fintech
+                used by Amazon, Google, WhatsApp, Marriot & more).
+              </span>
+              <br />
+              <span style={{}}>
+                <strong>3.</strong> You get notified in real time when payment
                 is made.
               </span>
               <br />
