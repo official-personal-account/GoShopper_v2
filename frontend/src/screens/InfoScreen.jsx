@@ -164,7 +164,7 @@ const InfoScreen = () => {
             </p>
             <p>
               <strong>Note: </strong>Installment payment arrangement is
-              available for all pricing plans, to allow you pay as low as Ghs250
+              available for all pricing plans, to allow you pay as low as Ghs300
               monthly, till you have paid the full plan price.
             </p>
             <p>
