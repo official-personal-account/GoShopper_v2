@@ -37,10 +37,15 @@ const InfoScreen = () => {
               <br />
               <span style={{}}>
                 <strong>2.</strong> Secured by{" "}
-                <a href="https://paystack.com">Paystack</a>, one of Africa's
-                leading fintech and a subsidiary of{" "}
-                <a href="https://stripe.com">Stripe</a> (a leading Global
-                fintech used by Amazon, Google, WhatsApp, Marriot & more).
+                <a href="https://paystack.com" target="__blank">
+                  Paystack
+                </a>
+                , one of Africa's leading fintech and a subsidiary of{" "}
+                <a href="https://stripe.com" target="__blank">
+                  Stripe
+                </a>{" "}
+                (a leading Global fintech used by Amazon, Google, WhatsApp,
+                Marriot & more).
               </span>
               <br />
               <span style={{}}>
