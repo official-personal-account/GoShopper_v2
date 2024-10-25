@@ -170,11 +170,6 @@ const InfoScreen = () => {
               <span style={{}}>- 5 years: 7,620</span>
             </p>
             <p>
-              <strong>Note: </strong>Installment payment arrangement is
-              available for all pricing plans, to allow you pay as low as Ghs300
-              monthly, till you have paid the full plan price.
-            </p>
-            <p>
               <strong>Bonus:</strong>
               <br />
               <span style={{}}>- Free domain name</span>
