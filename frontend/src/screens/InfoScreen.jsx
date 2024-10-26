@@ -10,8 +10,7 @@ const InfoScreen = () => {
       <Row>
         <Col md={6}>
           <Card className="p-4 m-3">
-            <h2>Why Proshopper?</h2>
-
+            <h2>Proshopper Video Demo</h2>
             <p>
               Watch a live recorded video demo of how proshopper works.
               <br />{" "}
@@ -24,6 +23,7 @@ const InfoScreen = () => {
 
             <br />
 
+            <h2>Why Proshopper?</h2>
             <p>
               Proshopper is a fully customizable ecommerce platform for food,
               clothing & product vendors:
@@ -175,8 +175,13 @@ const InfoScreen = () => {
               <span style={{}}>- Free domain name</span>
               <br />
               <span style={{}}>
-                - 1 month free digital marketing service to drive traffic from
-                across the web to your website. See a video demo on this.
+                - 50% discount on digital marketing service for your first
+                month, to help drive traffic from across the web to your
+                website. See{" "}
+                <a href="https://innosoltechgh.com/prices" target="__blank">
+                  digital marketing rates.
+                </a>{" "}
+                See some digital marketing video demos.
               </span>
               <br />
               <span style={{ marginLeft: "15px" }}>
