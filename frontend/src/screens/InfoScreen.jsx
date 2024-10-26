@@ -178,10 +178,10 @@ const InfoScreen = () => {
                 - 50% discount on digital marketing service for your first
                 month, to help drive traffic from across the web to your
                 website. See{" "}
-                <a href="https://innosoltechgh.com/prices" target="__blank">
-                  digital marketing rates.
-                </a>{" "}
-                See some digital marketing video demos.
+                <a href="https://innosoltechgh.com/pricing" target="__blank">
+                  digital marketing rates
+                </a>
+                . See some digital marketing video demos.
               </span>
               <br />
               <span style={{ marginLeft: "15px" }}>
