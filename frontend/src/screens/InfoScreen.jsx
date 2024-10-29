@@ -54,15 +54,13 @@ const InfoScreen = () => {
               </span>
               <br />
               <span style={{}}>
-                <strong>4.</strong> Secured by Paystack, one of Africa's leading
-                fintech & subsidiary of Stripe (a leading global fintech used by
-                Amazon, Google, WhatsApp, Marriot & more).
+                <strong>4.</strong> Easy to use & accessible on mobile & PC.
               </span>
               <br />
               <span style={{}}>
-                <strong>5.</strong> Easy to use & accessible on mobile & PC.
+                <strong>5.</strong> Can be installed and used as a desktop or
+                mobile app.
               </span>
-              <br />
             </p>
 
             <br />

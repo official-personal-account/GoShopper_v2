@@ -1,6 +1,6 @@
 ## IN PRODUCTION MODE
 
-1. 8. Create a copy of Proshopper for client in github
+1. Create a copy of Proshopper for client in github
 2. Turn on fields labeled for "FOR PRODUCTION MODE" & set "shipping price" & "tax price" in:
 
 - cartUtils.js
@@ -32,22 +32,22 @@
 
 10. Change Logo & favicon
 
-11. manifest.json original icons:
-    {
-    "src": "favicon.ico",
-    "sizes": "64x64 32x32 24x24 16x16",
-    "type": "image/x-icon"
-    },
-    {
-    "src": "logo192.png",
-    "type": "image/png",
-    "sizes": "192x192"
-    },
-    {
-    "src": "logo512.png",
-    "type": "image/png",
-    "sizes": "512x512"
-    },
+11. Make changes to these files in /public:
+
+- manifest.json
+- index.html
+
+TO NOTE:
+
+- Each client should be treated as a new project with its own dedicated database on free module.
+
+Useful definitions:
+
+- Storage - database size,
+- RAM - temporary storage for resources (data) currently in use. E.g. when you call orderlist, data currently in use would be list of all orders &
+- vCPU (virtual Central Processing Unit) - processes the commands to the database to fetch required data
+
+---
 
 ## IN DEVELOPMENT / TEST MODE
 
