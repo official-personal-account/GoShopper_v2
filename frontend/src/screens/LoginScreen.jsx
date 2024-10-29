@@ -43,7 +43,6 @@ const LoginScreen = () => {
   return (
     <FormContainer>
       <h1>Sign In</h1>
-
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="email" className="my-3">
           <Form.Label>Email Address</Form.Label>
@@ -73,7 +72,6 @@ const LoginScreen = () => {
         </Button>
         {isLoading && <Loader />}
       </Form>
-
       <Row className="py-3">
         <Col>
           Don't have an account?{" "}
@@ -82,20 +80,17 @@ const LoginScreen = () => {
           </Link>
         </Col>
       </Row>
-
       <hr />
-
       <Row className="pt-3">
         <p
           style={{
-            fontSize: "x-small",
+            fontSize: "small",
             fontWeight: "bold",
             letterSpacing: "1px",
             textTransform: "uppercase",
           }}
         >
-          Don't want to sign in or register to complete your order?{" "}
-          <Link to="/order-on-whatsapp">Order on WhatsApp</Link>
+          Or you can <Link to="/order-on-whatsapp">Order on WhatsApp</Link>
         </p>
       </Row>
     </FormContainer>
