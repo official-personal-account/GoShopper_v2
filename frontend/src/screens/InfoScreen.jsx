@@ -57,10 +57,10 @@ const InfoScreen = () => {
                 <strong>4.</strong> Easy to use & accessible on mobile & PC.
               </span>
               <br />
-              <span style={{}}>
+              {/* <span style={{}}>
                 <strong>5.</strong> Can be installed and used as a desktop or
                 mobile app.
-              </span>
+              </span> */}
             </p>
 
             <br />
