@@ -25,8 +25,9 @@ const InfoScreen = () => {
 
             <h2>Why Proshopper?</h2>
             <p>
-              Proshopper is a fully customizable ecommerce platform for food,
-              clothing & product vendors:
+              Proshopper is a fully customizable ecommerce application for food,
+              clothing & product vendors looking to have their own ecommerce
+              platform:
             </p>
             <p>
               <span style={{}}>
@@ -57,10 +58,10 @@ const InfoScreen = () => {
                 <strong>4.</strong> Easy to use & accessible on mobile & PC.
               </span>
               <br />
-              {/* <span style={{}}>
-                <strong>5.</strong> Can be installed and used as a desktop or
-                mobile app.
-              </span> */}
+              <span style={{}}>
+                <strong>5.</strong> Can be accessed via a URL, or installed and
+                used as a desktop or mobile app.
+              </span>
             </p>
 
             <br />
