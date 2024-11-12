@@ -53,6 +53,7 @@ const router = createBrowserRouter(
       <Route path="/order-on-whatsapp" element={<OrderOnWhatsAppScreen />} />
       <Route path="/login" element={<LoginScreen />} />
       <Route path="/register" element={<RegisterScreen />} />
+      <Route path="/thankyou" element={<ThankYouScreen />} />
 
       <Route path="" element={<PrivateRoute />}>
         <Route path="/shipping" element={<ShippingScreen />} />
@@ -61,7 +62,7 @@ const router = createBrowserRouter(
         <Route path="/order/:id" element={<OrderScreen />} />
         <Route path="/profile" element={<ProfileScreen />} />
         <Route path="/profile/:pageNumber" element={<ProfileScreen />} />
-        <Route path="/thankyou" element={<ThankYouScreen />} />
+        {/* <Route path="/thankyou" element={<ThankYouScreen />} /> */}
       </Route>
 
       <Route path="" element={<AdminRoute />}>

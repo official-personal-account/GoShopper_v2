@@ -180,7 +180,7 @@ const InfoScreen = () => {
                 <a href="https://innosoltechgh.com/pricing" target="__blank">
                   digital marketing rates
                 </a>
-                . See some digital marketing video demos.
+                . See some digital marketing video demos:
               </span>
               <br />
               <span style={{ marginLeft: "15px" }}>
