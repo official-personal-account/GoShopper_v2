@@ -59,8 +59,8 @@ const InfoScreen = () => {
               </span>
               <br />
               <span style={{}}>
-                <strong>5.</strong> Can be accessed via a URL, or installed and
-                used as a desktop or mobile app.
+                <strong>5.</strong> Can be installed & used as a desktop or
+                mobile app.
               </span>
             </p>
 
@@ -68,12 +68,12 @@ const InfoScreen = () => {
             <h5>If you are a small business owner</h5>
             <p>
               Proshopper saves you time, and allows you to focus on other
-              things, whiles still selling. On the digital store, every product
-              has the relevant product info. *Proshopper* itself, guides the
-              customer through each stage of the order process. As a result,
-              there is minimal interaction between you and the customer, before
-              or during the order process, allowing you some free time to engage
-              in other things.
+              things, whiles still selling. On Proshopper, every product has the
+              relevant product info. Proshopper itself, guides the customer
+              through each stage of the order process. As a result, there is
+              minimal interaction between you and the customer, before or during
+              the order process, allowing you some free time to engage in other
+              things.
             </p>
 
             <br />
