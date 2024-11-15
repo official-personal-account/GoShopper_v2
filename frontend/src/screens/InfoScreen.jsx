@@ -69,10 +69,10 @@ const InfoScreen = () => {
             <p>
               Proshopper saves you time, and allows you to focus on other
               things, whiles still selling. On Proshopper, every product has the
-              relevant product info. Proshopper itself, guides the customer
-              through each stage of the order process. As a result, there is
-              minimal interaction between you and the customer, before or during
-              the order process, allowing you some free time to engage in other
+              relevant product info. Proshopper itself, guides the user through
+              each stage of the order process. As a result, there is minimal
+              interaction between you and the customer, before or during the
+              order process, allowing you some free time to engage in other
               things.
             </p>
 
@@ -158,15 +158,15 @@ const InfoScreen = () => {
             <p>
               {/* <span style={{ }}>- Monthly payment: 225</span>
               <br /> */}
-              <span style={{}}>- 1 year: 2,100</span>
+              <span style={{}}>- 1 year: 3,000</span>
               <br />
-              <span style={{}}>- 2 years: 3,912</span>
+              <span style={{}}>- 2 years: 5,500</span>
               <br />
-              <span style={{}}>- 3 years: 5,436</span>
+              <span style={{}}>- 3 years: 7,562</span>
               <br />
-              <span style={{}}>- 4 years: 6,672</span>
+              <span style={{}}>- 4 years: 9,242</span>
               <br />
-              <span style={{}}>- 5 years: 7,620</span>
+              <span style={{}}>- 5 years: 10,589</span>
             </p>
             <p>
               <strong>Bonus:</strong>
