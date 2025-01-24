@@ -25,19 +25,19 @@ const InfoScreen = () => {
 
             <h2>Why Proshopper?</h2>
             <p>
-              Proshopper is a fully customizable ecommerce application for food,
-              clothing & product vendors looking to have their own ecommerce
-              platform:
+              Proshopper is an ecommerce application (website) that can be
+              deployed for food, clothing & product vendors looking to have
+              their own ecommerce website:
             </p>
             <p>
               <span style={{}}>
-                <strong>1.</strong> Allows customers to order & pay with mobile
+                <strong>✔</strong> Allows customers to order & pay with mobile
                 money or card, from anywhere, or select a cash-on-delivery
                 payment option.
               </span>
               <br />
               <span style={{}}>
-                <strong>2.</strong> Secured by{" "}
+                <strong>✔</strong> Secured by{" "}
                 <a href="https://paystack.com" target="__blank">
                   Paystack
                 </a>
@@ -50,17 +50,20 @@ const InfoScreen = () => {
               </span>
               <br />
               <span style={{}}>
-                <strong>3.</strong> You get notified in real time when payment
-                is made.
+                <strong>✔</strong> You get notified in real time when payment is
+                made.
               </span>
               <br />
               <span style={{}}>
-                <strong>4.</strong> Easy to use & accessible on mobile & PC.
+                <strong>✔</strong> Easy to use & accessible on mobile & PC.
               </span>
               <br />
               <span style={{}}>
-                <strong>5.</strong> Can be installed & used as a desktop or
-                mobile app.
+                <strong>✔</strong> Installable as a desktop or mobile app.
+              </span>
+              <br />
+              <span style={{}}>
+                <strong>✔</strong> Customisable to your needs
               </span>
             </p>
 
