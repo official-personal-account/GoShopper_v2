@@ -17,7 +17,7 @@ const router = express.Router();
 // Note: router.route is an express router method, used in place of app.get or app.post.
 // Note: "/api/products" is prefixed to all "/" routes in this file, to determine the route to be opened, and response to serve.
 
-router.route("/").get(getProducts).post(protect, admin, createProduct); // Note: this means that if the call is a "GET" method at the home route, we call "getProducts"
+router.route("/").get(getProducts).post(protect, admin, createProduct); // Note: this means that if the call is a "GET" method at the home route, we refer to "getProducts"
 router.get("/top-products", getTopProducts);
 router
   .route("/:id")

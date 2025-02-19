@@ -78,9 +78,10 @@ const InfoScreen = () => {
               order process, allowing you some free time to engage in other
               things.
             </p>
-
-            <br />
-
+          </Card>
+        </Col>
+        <Col md={6}>
+          <Card className="p-4 m-3">
             <h5>Testing & Exploring Proshopper</h5>
             <p>
               Use any of the credentials below to sign in & explore how the
@@ -109,67 +110,11 @@ const InfoScreen = () => {
           </Card>
         </Col>
 
-        {/* <Col md={6}>
-          <Card className="p-4 m-3">
-            <h2>How to take part in the promo challenge</h2>
-            <p>
-              To stand a chance to get Proshopper customized & deployed for you,
-              for free, you would need to:
-            </p>
-            <p>1. Like "Innosol Technologies" Facebook page</p>
-            <p>
-              2. Share the flyer post that has "Proshopper" boldly written on
-              it, to your page
-            </p>
-            <p>
-              3. In the comment section:
-              <br />
-              <span style={{ marginLeft: "15px" }}>
-                - State what you would be using the online store to sell
-              </span>{" "}
-              <br />{" "}
-              <span style={{ marginLeft: "15px" }}>
-                {" "}
-                - Tag your social media business page (if you have one)
-              </span>
-              <br />{" "}
-              <span style={{ marginLeft: "15px" }}>
-                {" "}
-                - Tag 5 friends you think might need an online store.
-              </span>
-              <br />
-              <span style={{ marginLeft: "15px" }}>
-                {" "}
-                - Add the last 4 digits of your phone number
-              </span>
-              <br />
-            </p>
-            <p>
-              <strong>Note:</strong> On the 15th of each month, beginning
-              September, for the next 3 months, up to 10 people would be
-              selected, and their 4 digit number would be placed in a
-              computerized random selector, in a live recorded video session.
-              The person with the number selected, gets an online store for
-              free!
-            </p>
-          </Card>
-        </Col> */}
-
         <Col md={6}>
           <Card className="p-4 m-3">
             <h2>Price (GHS)</h2>
             <p>
-              {/* <span style={{ }}>- Monthly payment: 225</span>
-              <br /> */}
-              <span style={{}}>- 1 year: 3,000</span>
-              <br />
-              <span style={{}}>- 2 years: 5,500</span>
-              <br />
-              <span style={{}}>- 3 years: 7,562</span>
-              <br />
-              <span style={{}}>- 4 years: 9,242</span>
-              <br />
-              <span style={{}}>- 5 years: 10,589</span>
+              Call/WhatsApp for price: <a href="+233272083116">027-2083-116</a>
             </p>
             <p>
               <strong>Bonus:</strong>
@@ -177,13 +122,13 @@ const InfoScreen = () => {
               <span style={{}}>- Free domain name</span>
               <br />
               <span style={{}}>
-                - 50% discount on digital marketing service for your first
-                month, to help drive traffic from across the web to your
-                website. See{" "}
+                - One month free digital marketing service, to help drive
+                traffic from across the web to your ecommerce website. See{" "}
                 <a href="https://innosoltechgh.com/pricing" target="__blank">
                   digital marketing rates
                 </a>
-                . See some digital marketing video demos:
+                . See some digital marketing video demos on how traffic is
+                driven to your website:
               </span>
               <br />
               <span style={{ marginLeft: "15px" }}>
