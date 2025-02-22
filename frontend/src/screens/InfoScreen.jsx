@@ -114,7 +114,7 @@ const InfoScreen = () => {
           <Card className="p-4 m-3">
             <h2>Price (GHS)</h2>
             <p>
-              Call/WhatsApp for price: <strong>+233-27-2083-116</strong>
+              Contact: <strong>+233-27-2083-116</strong>
             </p>
 
             <p>
