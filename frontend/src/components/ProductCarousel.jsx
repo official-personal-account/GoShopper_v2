@@ -29,4 +29,36 @@ const ProductCarousel = () => {
   );
 };
 
+// const ProductCarousel = () => {
+//   // const { data: products, isLoading, error } = useGetTopProductsQuery();
+
+//   return (
+//     <Carousel pause="hover" className="bg-primary mb-5">
+//       <Carousel.Item>
+//         <Image src="/images/1.png" alt="" />
+//         <Carousel.Caption>
+//           <h3>First slide label</h3>
+//           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+
+//       <Carousel.Item>
+//         <Image src="/images/2.png" alt="" />
+//         <Carousel.Caption>
+//           <h3>Second slide label</h3>
+//           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+
+//       <Carousel.Item>
+//         <Image src="/images/3.png" alt="" />
+//         <Carousel.Caption>
+//           <h3>Third slide label</h3>
+//           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//     </Carousel>
+//   );
+// };
+
 export default ProductCarousel;

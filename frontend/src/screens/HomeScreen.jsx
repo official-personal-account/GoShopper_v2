@@ -21,7 +21,7 @@ const HomeScreen = () => {
     <>
       {!keyword ? (
         <>
-          <h1>Top Products</h1>
+          {/* <h1>Top Products</h1> */}
           <ProductCarousel />
         </>
       ) : (

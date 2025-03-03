@@ -50,8 +50,8 @@ const InfoScreen = () => {
               </span>
               <br />
               <span style={{}}>
-                <strong>✔</strong> You get notified in real time when payment is
-                made.
+                <strong>✔</strong> You get a message notification in real time,
+                when an order is made.
               </span>
               <br />
               <span style={{}}>
