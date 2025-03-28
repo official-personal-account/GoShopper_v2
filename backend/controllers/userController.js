@@ -175,7 +175,7 @@ const deleteUser = asyncHandler(async (req, res) => {
       user.email === "jbrown@email.com"
     ) {
       res.status(400);
-      throw new Error("Can't delete test user");
+      throw new Error("You can't delete test user");
     }
     await User.deleteOne({ _id: user._id });
     res.status(200).json({ message: "User deleted successfully" });
@@ -202,7 +202,7 @@ const updateUser = asyncHandler(async (req, res) => {
       user.email === "jbrown@email.com"
     ) {
       res.status(400);
-      throw new Error("Can't edit test user");
+      throw new Error("You can't edit test user");
     }
     user.name = req.body.name || user.name;
     user.email = req.body.email || user.email;

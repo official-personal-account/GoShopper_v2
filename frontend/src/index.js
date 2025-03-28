@@ -10,8 +10,8 @@ import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { Provider } from "react-redux";
 import store from "./store";
 import { HelmetProvider } from "react-helmet-async";
-import "bootstrap/dist/css/bootstrap.min.css"; // css1 - css1 or css2 can be used
-// import "./assets/styles/bootstrap.custom.css"; // css2
+// import "bootstrap/dist/css/bootstrap.min.css"; // css1 - css1 or css2 can be used
+import "./assets/styles/bootstrap.custom.css"; // css2
 import "./assets/styles/index.css"; // must always be kept on
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";

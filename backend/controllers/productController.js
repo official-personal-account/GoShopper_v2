@@ -76,10 +76,14 @@ const updateProduct = asyncHandler(async (req, res) => {
       product.name === "Sony Playstation 4 Pro White Version" ||
       product.name === "Logitech G-Series Gaming Mouse" ||
       product.name === "Airpods Wireless Bluetooth Headphones" ||
-      product.name === "iPhone 11 Pro 256GB Memory"
+      product.name === "iPhone 11 Pro 256GB Memory" ||
+      product.name === "Men Kaftan" ||
+      product.name === "Jollof Rice" ||
+      product.name === "Women Lace" ||
+      product.name === "Banku & Tilapia"
     ) {
       res.status(400);
-      throw new Error("Can't edit test product");
+      throw new Error("You can't edit test product");
     }
     product.name = name;
     product.price = price;
@@ -119,7 +123,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
       product.name === "Banku & Tilapia"
     ) {
       res.status(400);
-      throw new Error("Can't delete test product.");
+      throw new Error("You can't delete test product.");
     }
     await Product.deleteOne({ _id: product._id });
     res.status(200).json({ message: "Product deleted" });

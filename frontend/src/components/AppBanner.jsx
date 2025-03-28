@@ -4,15 +4,18 @@ const AppBanner = () => {
   return (
     <div
       style={{
-        background: "rgba(0, 0, 255, 0.3)",
+        background: "rgba(255, 18, 18)",
         textAlign: "center",
         height: "25px",
       }}
     >
-      <p style={{ fontSize: "small" }}>
+      <p style={{ fontSize: "small", color: "white" }}>
         Want to learn more about Proshopper?{" "}
-        <Link to="/info">
-          <span style={{ color: "blue" }}>See here</span>
+        <Link
+          to="/info"
+          style={{ color: "white", textDecorationColor: "white" }}
+        >
+          See here
         </Link>
       </p>
     </div>

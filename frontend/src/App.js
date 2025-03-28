@@ -11,8 +11,8 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <Header />
       <AppBanner />
+      <Header />
       <main className="py-3 body-colour">
         <Container>
           <Outlet />
