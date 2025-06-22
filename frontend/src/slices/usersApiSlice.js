@@ -37,7 +37,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         method: "GET",
       }),
       providesTags: ["User"],
-      keepUnusedDataFor: 5,
+      keepUnusedDataFor: 5, // // Used with "GET" method to keep the data for a period, so that it can be available for use if needed again
     }),
     deleteUser: builder.mutation({
       query: (userId) => ({

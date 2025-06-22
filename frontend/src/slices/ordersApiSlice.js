@@ -15,7 +15,7 @@ export const ordersApiSlice = apiSlice.injectEndpoints({
         url: `${ORDERS_URL}/${orderId}`,
         method: "GET", // Note: default method is "GET". So "method" can be ommitted if request is a "GET" request.
       }),
-      keepUnusedDataFor: 5,
+      keepUnusedDataFor: 5, // Used with "GET" method to keep the data for a period, so that it can be available for use if needed again
     }),
     payOrder: builder.mutation({
       query: ({ orderId, details }) => ({
