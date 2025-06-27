@@ -42,9 +42,14 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<HomeScreen />} />
       <Route path="/search/:keyword" element={<HomeScreen />} />
-      <Route path="/page/:pageNumber" element={<HomeScreen />} />
       <Route
         path="/search/:keyword/page/:pageNumber"
+        element={<HomeScreen />}
+      />
+      <Route path="/page/:pageNumber" element={<HomeScreen />} />
+      <Route path="/category/:category" element={<HomeScreen />} />
+      <Route
+        path="/category/:category/page/:pageNumber"
         element={<HomeScreen />}
       />
       <Route path="/product/:id" element={<ProductScreen />} />
@@ -62,7 +67,7 @@ const router = createBrowserRouter(
         <Route path="/order/:id" element={<OrderScreen />} />
         <Route path="/profile" element={<ProfileScreen />} />
         <Route path="/profile/:pageNumber" element={<ProfileScreen />} />
-        {/* <Route path="/thankyou" element={<ThankYouScreen />} /> */}
+        <Route path="/thankyou" element={<ThankYouScreen />} />
       </Route>
 
       <Route path="" element={<AdminRoute />}>

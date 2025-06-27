@@ -47,7 +47,7 @@ const ShippingScreen = () => {
       <h1>Shipping/Delivery Address</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="address" className="my-3">
-          <Form.Label>Delivery Address or Closest Landmark</Form.Label>
+          <Form.Label>Closest Landmark (example: Trinity Hospital)</Form.Label>
           <Form.Control
             type="text"
             placeholder="Type your address"

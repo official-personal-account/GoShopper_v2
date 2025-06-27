@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Row, Col, Card } from "react-bootstrap";
+import { Button, Row, Col, Card } from "react-bootstrap";
 
 const InfoScreen = () => {
   return (

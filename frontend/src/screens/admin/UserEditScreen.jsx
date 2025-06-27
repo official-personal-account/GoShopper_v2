@@ -54,7 +54,7 @@ const UserEditScreen = () => {
 
   return (
     <>
-      <Link to="/admin/userlist" className="btn btn-secondary my-3">
+      <Link to="/admin/userlist" className="btn btn-secondary my-3 link-text">
         Go Back
       </Link>
 

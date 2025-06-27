@@ -5,7 +5,7 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 const ThankYouScreen = () => {
   return (
     <>
-      {/* <Link className="btn btn-secondary my-3" to={"/"}>
+      {/* <Link className="btn btn-secondary my-3 link-text" to={"/"}>
         Go Back
       </Link> */}
       <Card className="text-center m-5">
@@ -26,7 +26,9 @@ const ThankYouScreen = () => {
             Your Order was successfully placed. We hope you come back again
           </Card.Text>
           <Link to={"/"}>
-            <Button variant="primary">Go Back</Button>
+            <Button variant="primary" className="link-text">
+              Go Back
+            </Button>
           </Link>
         </Card.Body>
         {/* <Card.Footer className="text-muted">2 days ago</Card.Footer> */}

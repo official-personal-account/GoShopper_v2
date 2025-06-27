@@ -61,11 +61,11 @@ const orderSchema = new mongoose.Schema(
     },
     reference: {
       type: String,
-      unique: true,
+      // unique: true,
     },
-    paystack_ref: {
-      type: String,
-    },
+    // paystack_ref: {
+    //   type: String,
+    // },
     paystack_access_code: {
       type: String,
     },

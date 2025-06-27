@@ -10,18 +10,43 @@ const getProducts = asyncHandler(async (req, res) => {
   const pageSize = process.env.PAGINATION_LIMIT;
   const page = Number(req.query.pageNumber) || 1;
 
+  const category = req.query.category
+    ? { category: { $regex: req.query.category, $options: "i" } }
+    : {};
+
+  // console.log(category);
+
   const keyword = req.query.keyword
     ? { name: { $regex: req.query.keyword, $options: "i" } }
     : {};
 
-  const count = await Product.countDocuments({ ...keyword });
+  const count = await Product.countDocuments({ ...keyword, ...category });
+  // console.log(count);
 
-  const products = await Product.find({ ...keyword })
+  const products = await Product.find({ ...keyword, ...category })
     .sort({ createdAt: "desc" })
     .limit(pageSize)
     .skip(pageSize * (page - 1)); // minus 1 means: except the one page we are on, exclude every page we do not want.
   res.json({ products, page, pages: Math.ceil(count / pageSize) });
 });
+
+// ORIGINAL
+// const getProducts = asyncHandler(async (req, res) => {
+//   const pageSize = process.env.PAGINATION_LIMIT;
+//   const page = Number(req.query.pageNumber) || 1;
+
+//   const keyword = req.query.keyword
+//     ? { name: { $regex: req.query.keyword, $options: "i" } }
+//     : {};
+
+//   const count = await Product.countDocuments({ ...keyword });
+
+//   const products = await Product.find({ ...keyword })
+//     .sort({ createdAt: "desc" })
+//     .limit(pageSize)
+//     .skip(pageSize * (page - 1)); // minus 1 means: except the one page we are on, exclude every page we do not want.
+//   res.json({ products, page, pages: Math.ceil(count / pageSize) });
+// });
 
 // NOTE:
 // @desc        fetch a product

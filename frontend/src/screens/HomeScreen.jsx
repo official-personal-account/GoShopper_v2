@@ -8,14 +8,21 @@ import Paginate from "../components/Paginate";
 import { useGetProductsQuery } from "../slices/productsApiSlice";
 import ProductCarousel from "../components/ProductCarousel";
 import Meta from "../components/Meta";
+import ProductCategory from "../components/ProductCategory";
 
 const HomeScreen = () => {
-  const { keyword, pageNumber } = useParams();
+  const { keyword, pageNumber, category } = useParams();
+  // console.log(category);
+
   const url = useLocation();
+
   const { data, isLoading, error } = useGetProductsQuery({
+    category,
     keyword,
     pageNumber,
   });
+
+  // console.log(data);
 
   return (
     <>
@@ -25,12 +32,12 @@ const HomeScreen = () => {
           <ProductCarousel />
         </>
       ) : (
-        <Link to="/" className="btn btn-secondary mb-4">
+        <Link to="/" className="btn btn-secondary mb-4 link-text">
           Go Back
         </Link>
       )}
       {/* {keyword && (
-        <Link to="/" className="btn btn-secondary mb-4">
+        <Link to="/" className="btn btn-secondary mb-4 link-text">
           Go Back
         </Link>
       )} */}
@@ -45,6 +52,7 @@ const HomeScreen = () => {
       ) : (
         <>
           <Meta />
+          <ProductCategory />
           <h1>Latest Products</h1>
           <Row>
             {data.products.map((product) => (
@@ -59,6 +67,7 @@ const HomeScreen = () => {
             page={data.page}
             url={url}
             keyword={keyword ? keyword : ""}
+            category={category ? category : ""}
           />
         </>
       )}

@@ -1,6 +1,7 @@
 import { Pagination } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
+// ORIGINAL PAGINATION
 // const Paginate = ({ pages, page, url, isAdmin = false, keyword = "" }) => {
 //   // console.log(url);
 //   return (
@@ -25,7 +26,14 @@ import { LinkContainer } from "react-router-bootstrap";
 //   );
 // };
 
-const Paginate = ({ pages, page, url, isAdmin = false, keyword = "" }) => {
+const Paginate = ({
+  pages,
+  page,
+  url,
+  isAdmin = false,
+  keyword = "",
+  category = "",
+}) => {
   const pathname = url.pathname;
 
   return (
@@ -40,6 +48,8 @@ const Paginate = ({ pages, page, url, isAdmin = false, keyword = "" }) => {
                   ? `/search/${keyword}/page/${x + 1}`
                   : pathname.includes("/profile")
                   ? `/profile/${x + 1}`
+                  : pathname.includes("category")
+                  ? `/category/${category}/page/${x + 1}`
                   : `/page/${x + 1}`
                 : pathname.includes("admin/orderlist")
                 ? `/admin/orderlist/${x + 1}`

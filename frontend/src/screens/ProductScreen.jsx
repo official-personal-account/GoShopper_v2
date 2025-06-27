@@ -69,7 +69,7 @@ const ProductScreen = () => {
 
   return (
     <>
-      <Link className="btn btn-secondary my-3" to={"/"}>
+      <Link className="btn btn-secondary my-3 link-text" to={"/"}>
         Go Back
       </Link>
 
