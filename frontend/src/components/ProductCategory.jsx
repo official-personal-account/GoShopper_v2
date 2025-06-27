@@ -9,10 +9,6 @@ const ProductCategory = () => {
     navigate(`/category/${category}`);
   };
 
-  // const handleAllProductsClick = () => {
-  //   navigate("/");
-  // };
-
   return (
     <div className="product-category-container">
       {/* <button
@@ -47,31 +43,6 @@ const ProductCategory = () => {
       >
         Food
       </button>
-
-      {/* <Button
-        type="button"
-        value="electronics"
-        className="btn btn-secondary p-2 mx-2 link-text"
-        onClick={handleClick}
-      >
-        Electronics
-      </Button>
-      <Button
-        type="button"
-        value="food"
-        className="btn btn-secondary p-2 mx-2 link-text"
-        onClick={handleClick}
-      >
-        Food
-      </Button>
-      <Button
-        type="button"
-        value="fashion"
-        className="btn btn-secondary p-2 mx-2 link-text"
-        onClick={handleClick}
-      >
-        Fashion
-      </Button> */}
     </div>
   );
 };
