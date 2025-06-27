@@ -10,19 +10,11 @@ const ProductCategory = () => {
   };
 
   return (
-    <div className="product-category-container">
-      {/* <button
-        type="button"
-        value="all-products"
-        className="link-text category-button"
-        onClick={handleAllProductsClick}
-      >
-        All Products
-      </button> */}
+    <div className="category-container">
       <button
         type="button"
         value="electronics"
-        className="link-text category-button"
+        className="link-text"
         onClick={handleClick}
       >
         Electronics
@@ -30,7 +22,7 @@ const ProductCategory = () => {
       <button
         type="button"
         value="fashion"
-        className="link-text category-button"
+        className="link-text"
         onClick={handleClick}
       >
         Fashion
@@ -38,7 +30,7 @@ const ProductCategory = () => {
       <button
         type="button"
         value="food"
-        className="link-text category-button"
+        className="link-text"
         onClick={handleClick}
       >
         Food

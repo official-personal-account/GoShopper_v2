@@ -5,7 +5,7 @@ const connectDB = async () => {
   try {
     // const conn = await mongoose.connect(process.env.MONGO_URI); // original
     const conn = await mongoose.connect(
-      process.env.NODE_ENV !== "development"
+      process.env.NODE_ENV == "development"
         ? process.env.MONGO_URI_LOCAL
         : process.env.MONGO_URI
     );

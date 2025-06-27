@@ -25,7 +25,7 @@ const SearchBox = () => {
         type="text"
         name="query"
         value={keyword}
-        placeholder="Search products..."
+        placeholder="Search product by name (e.g. iPhone)"
         onChange={(event) => setKeyword(event.target.value)}
       ></Form.Control>
 

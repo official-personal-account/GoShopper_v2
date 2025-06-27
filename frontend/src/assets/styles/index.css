@@ -79,9 +79,9 @@ table th {
   background-image: linear-gradient(300deg, grey, white) !important;
 }
 
-.link-text {
+/* .link-text {
   color: white;
-}
+} */
 
 .sm-text {
   font-size: small;
@@ -91,17 +91,22 @@ table th {
   font-size: medium;
 }
 
-.category-button {
+.category-container button {
   border-radius: 25px;
   border: 1px solid #a0787c;
+  color: white;
   padding: 5px 10px;
   background-color: #a0787c;
   margin-bottom: 10px;
   margin-right: 5px;
 }
 
-.category-button:hover {
+.category-container button:hover {
   background-color: white;
   color: #a0787c;
   border: 1px solid #a0787c;
 }
+
+/* .category-container {
+margin
+} */
