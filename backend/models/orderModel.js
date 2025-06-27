@@ -61,7 +61,7 @@ const orderSchema = new mongoose.Schema(
     },
     reference: {
       type: String,
-      // unique: true,
+      unique: true,
     },
     // paystack_ref: {
     //   type: String,
