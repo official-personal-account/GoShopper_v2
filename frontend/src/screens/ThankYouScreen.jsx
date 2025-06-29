@@ -23,7 +23,7 @@ const ThankYouScreen = () => {
           </Card.Title>
           <IoIosCheckmarkCircle size={106} color="#6eacda" />
           <Card.Text>
-            Your Order was successfully placed. We hope you come back again
+            Your order is being processed to be delivered to you.
           </Card.Text>
           <Link to={"/"}>
             <Button variant="primary" className="link-text">
