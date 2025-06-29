@@ -402,9 +402,9 @@ const addWebHook = async function (req, res) {
       const response = await chargeSuccess(data);
 
       // res.send(response)
-      console.log(response);
+      console.log({ message: response.message });
     } else {
-      console.log("Payment not successful");
+      console.log({ message: "Payment not successful" });
     }
   } catch (error) {
     // res.status(400).send({ data: {}, error: `${err.message}`, status: 1 });
