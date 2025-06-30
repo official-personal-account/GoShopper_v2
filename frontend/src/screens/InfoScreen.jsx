@@ -10,19 +10,6 @@ const InfoScreen = () => {
       <Row>
         <Col md={6}>
           <Card className="p-4 m-3">
-            <h2>Proshopper Video Demo</h2>
-            <p>
-              Watch a live recorded video demo of how proshopper works.
-              <br />{" "}
-              <span style={{ marginLeft: "15px" }}>
-                <a href="https://drive.google.com/file/d/1b2c-tiFIhsJIxi4kPwplUeNdYU7cwz5N/view?usp=drivesdk">
-                  Video demo 1
-                </a>
-              </span>
-            </p>
-
-            <br />
-
             <h2>Why Proshopper?</h2>
             <p>
               Proshopper is an ecommerce application (website) that can be
@@ -32,8 +19,7 @@ const InfoScreen = () => {
             <p>
               <span style={{}}>
                 <strong>✔</strong> Allows customers to order & pay with mobile
-                money or card, from anywhere, or select a cash-on-delivery
-                payment option.
+                money or card, or select a cash-on-delivery payment option.
               </span>
               <br />
               <span style={{}}>
@@ -56,10 +42,6 @@ const InfoScreen = () => {
               <br />
               <span style={{}}>
                 <strong>✔</strong> Easy to use & accessible on mobile & PC.
-              </span>
-              <br />
-              <span style={{}}>
-                <strong>✔</strong> Installable as a desktop or mobile app.
               </span>
               <br />
               <span style={{}}>
@@ -110,7 +92,7 @@ const InfoScreen = () => {
           </Card>
         </Col>
 
-        <Col md={6}>
+        {/* <Col md={6}>
           <Card className="p-4 m-3">
             <h2>Price (GHS)</h2>
             <p>
@@ -145,7 +127,7 @@ const InfoScreen = () => {
               </span>
             </p>
           </Card>
-        </Col>
+        </Col> */}
       </Row>
     </>
   );
