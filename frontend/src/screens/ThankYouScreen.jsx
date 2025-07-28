@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Row, Col, Card, Button } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 
 const ThankYouScreen = () => {

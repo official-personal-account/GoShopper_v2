@@ -35,12 +35,14 @@ import UserEditScreen from "./screens/admin/UserEditScreen";
 import InfoScreen from "./screens/InfoScreen";
 import OrderOnWhatsAppScreen from "./screens/OrderOnWhatsAppScreen";
 import ThankYouScreen from "./screens/ThankYouScreen";
+import ImgurTestScreen from "./screens/ImgurTestScreen";
 
 // Note: React Router
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<HomeScreen />} />
+      <Route path="/imgur" element={<ImgurTestScreen />} />
       <Route path="/search/:keyword" element={<HomeScreen />} />
       <Route
         path="/search/:keyword/page/:pageNumber"

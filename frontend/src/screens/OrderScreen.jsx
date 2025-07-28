@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Row, Col, ListGroup, Image, Button, Card } from "react-bootstrap";
 import { toast } from "react-toastify";
@@ -9,9 +8,8 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import {
   useGetOrderDetailsQuery,
-  useGetAccessCodeQuery, // NOTE: FOR BACKEND PAYSTACK
   usePayOrderMutation,
-  useGetPayPalClientIdQuery,
+  // useGetPayPalClientIdQuery,
   useDeliverOrderMutation,
   useInitiateTransMutation, // NOTE: FOR BACKEND PAYSTACK
 } from "../slices/ordersApiSlice";
@@ -50,45 +48,45 @@ const OrderScreen = () => {
 
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
 
-  const {
-    data: paypal,
-    isLoading: loadingPayPal,
-    error: errorPayPal,
-  } = useGetPayPalClientIdQuery();
+  // const {
+  //   data: paypal,
+  //   isLoading: loadingPayPal,
+  //   error: errorPayPal,
+  // } = useGetPayPalClientIdQuery();
 
   const { userInfo } = useSelector((state) => state.auth);
 
-  useEffect(() => {
-    if (!errorPayPal && !loadingPayPal && paypal.clientId) {
-      const loadPayPalScript = async () => {
-        paypalDispatch({
-          type: "resetOptions",
-          value: {
-            "client-id": paypal.clientId,
-            currency: "USD",
-          },
-        });
-        paypalDispatch({ type: "setLoadingStatus", value: "pending" });
-      };
-      if (order && !order.isPaid) {
-        if (!window.paypal) {
-          loadPayPalScript();
-        }
-      }
-    }
-  }, [order, paypal, paypalDispatch, loadingPayPal, errorPayPal]);
+  // useEffect(() => {
+  //   if (!errorPayPal && !loadingPayPal && paypal.clientId) {
+  //     const loadPayPalScript = async () => {
+  //       paypalDispatch({
+  //         type: "resetOptions",
+  //         value: {
+  //           "client-id": paypal.clientId,
+  //           currency: "USD",
+  //         },
+  //       });
+  //       paypalDispatch({ type: "setLoadingStatus", value: "pending" });
+  //     };
+  //     if (order && !order.isPaid) {
+  //       if (!window.paypal) {
+  //         loadPayPalScript();
+  //       }
+  //     }
+  //   }
+  // }, [order, paypal, paypalDispatch, loadingPayPal, errorPayPal]);
 
-  function onApprove(data, actions) {
-    return actions.order.capture().then(async function (details) {
-      try {
-        await payOrder({ orderId, details }).unwrap();
-        refetch();
-        toast.success("Payment Successful!");
-      } catch (err) {
-        toast.error(err?.data?.message || err.message);
-      }
-    });
-  }
+  // function onApprove(data, actions) {
+  //   return actions.order.capture().then(async function (details) {
+  //     try {
+  //       await payOrder({ orderId, details }).unwrap();
+  //       refetch();
+  //       toast.success("Payment Successful!");
+  //     } catch (err) {
+  //       toast.error(err?.data?.message || err.message);
+  //     }
+  //   });
+  // }
 
   async function onApproveTest() {
     await payOrder({ orderId, details: { payer: {} } }).unwrap();
@@ -96,25 +94,25 @@ const OrderScreen = () => {
     toast.success("Payment Successful!");
   }
 
-  function onError(err) {
-    toast.error(err.message);
-  }
+  // function onError(err) {
+  //   toast.error(err.message);
+  // }
 
-  function createOrder(data, actions) {
-    return actions.order
-      .create({
-        purchase_units: [
-          {
-            amount: {
-              value: order.totalPrice,
-            },
-          },
-        ],
-      })
-      .then((orderId) => {
-        return orderId;
-      });
-  }
+  // function createOrder(data, actions) {
+  //   return actions.order
+  //     .create({
+  //       purchase_units: [
+  //         {
+  //           amount: {
+  //             value: order.totalPrice,
+  //           },
+  //         },
+  //       ],
+  //     })
+  //     .then((orderId) => {
+  //       return orderId;
+  //     });
+  // }
 
   const deliverOrderHandler = async () => {
     try {
