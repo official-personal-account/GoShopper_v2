@@ -130,8 +130,8 @@ const OrderScreen = () => {
 
   //   const popup = new PaystackPop();
   //   popup.newTransaction({
-  //     // key: "pk_live_bb34bea4fa5fdcad7a0386a6e5228c02edd2f34c",
-  //     key: "pk_test_a3f15c2486d2df46cec9d5fdb6a46152eb792cc7",
+  //     key: process.env.PAYSTACK_LIVE_PUBLIC_KEY,
+  //     key: process.env.PAYSTACK_TEST_PUBLIC_KEY,
   //     reference: order.reference,
   //     channels: ["card", "mobile_money"],
   //     currency: "GHS",
