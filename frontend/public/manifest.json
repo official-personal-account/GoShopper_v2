@@ -1,19 +1,19 @@
 {
-  "short_name": "Proshopper",
-  "name": "Proshopper Ecommerce App",
+  "short_name": "Goshopper",
+  "name": "Goshopper Ecommerce App",
   "icons": [
     {
-      "src": "proshopper-logo.png",
+      "src": "goshopper-logo.png",
       "type": "image/png",
       "sizes": "64x64 32x32 24x24 16x16"
     },
     {
-      "src": "proshopper-logo192.png",
+      "src": "goshopper-logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "proshopper-logo512.png",
+      "src": "goshopper-logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
