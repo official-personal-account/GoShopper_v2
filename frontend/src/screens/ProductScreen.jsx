@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import {
   Form,
   Row,
+  Badge,
   Col,
   Image,
   ListGroup,
@@ -89,9 +90,9 @@ const ProductScreen = () => {
               <Image src={product.image} alt={product.name} fluid />
             </Col>
             <Col md={4}>
-              <ListGroup variant="flush">
+              <ListGroup variant="flush" className="text-bg-colour">
                 <ListGroup.Item>
-                  <h3>{product.name}</h3>
+                  <h4>{product.name}</h4>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Rating
@@ -122,9 +123,17 @@ const ProductScreen = () => {
                       <Col>
                         <strong>
                           {product.countInStock > 0 ? (
-                            <p className="green-colored-text">In stock</p>
+                            <p className="green-colored-text">
+                              <Badge pill bg="success">
+                                In stock
+                              </Badge>
+                            </p>
                           ) : (
-                            <p className="red-colored-text">Out of stock</p>
+                            <p className="red-colored-text">
+                              <Badge pill bg="danger">
+                                Out of stock
+                              </Badge>
+                            </p>
                           )}
                         </strong>
                       </Col>
@@ -186,7 +195,7 @@ const ProductScreen = () => {
                 ))}
                 <ListGroup.Item>
                   {/* <h2>Leave A Customer Review</h2> */}
-                  <h3>Leave A Customer Review</h3>
+                  <h4>Leave A Customer Review</h4>
 
                   {loadingProductReview && <Loader />}
 

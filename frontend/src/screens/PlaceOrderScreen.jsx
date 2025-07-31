@@ -63,35 +63,46 @@ const PlaceOrderScreen = () => {
         <Col md={8}>
           <ListGroup variant="flush">
             <ListGroup.Item>
-              <h2>Shipping/Delivery Address</h2>
-              <p>
-                <strong>Address: </strong>
-                {cart.shippingAddress.address}, {cart.shippingAddress.area},{" "}
-                {cart.shippingAddress.city}, {cart.shippingAddress.state},{" "}
-                {cart.shippingAddress.postalCode},{" "}
-                {cart.shippingAddress.country}{" "}
-              </p>
-              <p>
-                <strong>Phone Number: </strong>
-                {cart.shippingAddress.phoneNumber}
-              </p>
+              <h4>Shipping/Delivery Address</h4>
+              <div className="text-bg-colour">
+                <p>
+                  <strong>Address: </strong>
+                  {cart.shippingAddress.address}, {cart.shippingAddress.area},{" "}
+                  {cart.shippingAddress.city}, {cart.shippingAddress.state},{" "}
+                  {cart.shippingAddress.postalCode},{" "}
+                  {cart.shippingAddress.country}{" "}
+                </p>
+                <p>
+                  <strong>Phone Number: </strong>
+                  {cart.shippingAddress.phoneNumber}
+                </p>
+              </div>
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Payment Method</h2>
-              <strong>Method: </strong>
-              {cart.paymentMethod}
-              {/* {cart.paymentMethod} */}
+              <h4>Payment Method</h4>
+              <div className="text-bg-colour">
+                <strong>Method: </strong>
+                {cart.paymentMethod}
+                {/* {cart.paymentMethod} */}
+              </div>
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Order Items</h2>
+              <h4>Order Items</h4>
               {cart.cartItems === 0 ? (
                 <Message>Your cart is empty</Message>
               ) : (
                 <ListGroup variant="flush">
                   {cart.cartItems.map((item, index) => (
-                    <ListGroup.Item key={index}>
+                    <ListGroup.Item
+                      key={index}
+                      style={{
+                        borderRadius: "5px",
+                        marginBottom: "5px",
+                        backgroundColor: "#fde6e8ff",
+                      }}
+                    >
                       <Row>
                         <Col xs={2} sm={2} md={1}>
                           <Image
@@ -125,12 +136,13 @@ const PlaceOrderScreen = () => {
           <Card>
             <ListGroup variant="flush">
               <ListGroup.Item>
-                <h2>Order Summary</h2>
+                <h4>Order Summary</h4>
               </ListGroup.Item>
 
               <ListGroup.Item>
                 <Row>
                   <Col>Order Items:</Col>
+
                   <Col>{cart.itemsPrice}</Col>
                 </Row>
               </ListGroup.Item>
@@ -152,7 +164,7 @@ const PlaceOrderScreen = () => {
               <ListGroup.Item>
                 <Row>
                   <Col>
-                    <strong>Total:</strong>
+                    <strong>TOTAL:</strong>
                   </Col>
                   <Col>{cart.totalPrice}</Col>
                 </Row>

@@ -35,7 +35,7 @@ const CartScreen = () => {
   return (
     <Row>
       <Col md={8}>
-        <h1 style={{ marginBottom: "20px" }}>Shopping Cart</h1>
+        <h4 style={{ marginBottom: "20px" }}>Shopping Cart</h4>
         {cartItems.length === 0 ? (
           <Message>
             Your cart is empty.{" "}
@@ -46,7 +46,7 @@ const CartScreen = () => {
         ) : (
           <ListGroup variant="flush">
             {cartItems.map((item) => (
-              <ListGroup.Item key={item._id}>
+              <ListGroup.Item key={item._id} className="card-strip">
                 <Row>
                   <Col xs={2} md={2}>
                     <Image
@@ -100,10 +100,10 @@ const CartScreen = () => {
         <Card>
           <ListGroup variant="flush">
             <ListGroup.Item>
-              <h3>
+              <h4>
                 In your cart:{" "}
                 {cartItems.reduce((acc, item) => acc + item.qty, 0)} item(s)
-              </h3>
+              </h4>
               <p>
                 Subtotal: ₵
                 {cartItems

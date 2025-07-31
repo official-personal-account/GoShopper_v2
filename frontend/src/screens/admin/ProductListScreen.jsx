@@ -54,7 +54,7 @@ const ProductListScreen = () => {
     <>
       <Row className="align-items-center">
         <Col>
-          <h1>Product List</h1>
+          <h4>Product List</h4>
         </Col>
 
         <Col className="text-end">

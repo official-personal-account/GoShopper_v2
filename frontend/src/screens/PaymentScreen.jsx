@@ -32,39 +32,40 @@ const PaymentScreen = () => {
   return (
     <FormContainer>
       <CheckoutSteps step1 step2 step3 />
-      <h1>Payment Method</h1>
-      <Form onSubmit={submitHandler}>
-        <Form.Group>
-          <Form.Label as="legend">Select Method</Form.Label>
-          <Col>
-            <Form.Check
-              type="radio"
-              className="my-2"
-              label="Card / Mobile Money"
-              id="card-or-momo"
-              name="paymentMethod"
-              value="Card / Mobile Money"
-              // checked
-              required
-              onChange={(event) => {
-                setPaymentMethod(event.target.value);
-              }}
-            ></Form.Check>
-          </Col>
+      <h4>Payment Method</h4>
+      <div className="card-strip">
+        <Form onSubmit={submitHandler}>
+          <Form.Group>
+            <Form.Label as="legend">Select Method</Form.Label>
+            <Col>
+              <Form.Check
+                type="radio"
+                className="my-2"
+                label="Card / Mobile Money"
+                id="card-or-momo"
+                name="paymentMethod"
+                value="Card / Mobile Money"
+                // checked
+                required
+                onChange={(event) => {
+                  setPaymentMethod(event.target.value);
+                }}
+              ></Form.Check>
+            </Col>
 
-          <Col>
-            <Form.Check
-              type="radio"
-              className="my-2"
-              label="Cash On Delivery"
-              id="cash-on-delivery"
-              name="paymentMethod"
-              value="Cash On Delivery"
-              onChange={(event) => setPaymentMethod(event.target.value)}
-            ></Form.Check>
-          </Col>
+            <Col>
+              <Form.Check
+                type="radio"
+                className="my-2"
+                label="Cash On Delivery"
+                id="cash-on-delivery"
+                name="paymentMethod"
+                value="Cash On Delivery"
+                onChange={(event) => setPaymentMethod(event.target.value)}
+              ></Form.Check>
+            </Col>
 
-          {/* <Col>
+            {/* <Col>
             <Form.Check
               type="radio"
               className="my-2"
@@ -76,12 +77,13 @@ const PaymentScreen = () => {
               onChange={(event) => setPaymentMethod(event.target.value)}
             ></Form.Check>
           </Col> */}
-        </Form.Group>
+          </Form.Group>
 
-        <Button type="submit" variant="primary" className="mt-3">
-          Continue
-        </Button>
-      </Form>
+          <Button type="submit" variant="primary" className="mt-3">
+            Continue
+          </Button>
+        </Form>
+      </div>
     </FormContainer>
   );
 };

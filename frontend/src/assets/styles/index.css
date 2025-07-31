@@ -66,14 +66,6 @@ table th {
   object-fit: contain;
 }
 
-.red-colored-text {
-  color: red;
-}
-
-.green-colored-text {
-  color: green;
-}
-
 .carousel {
   /* background-color: rgb(180, 180, 180) !important; */
   background-image: linear-gradient(300deg, grey, white) !important;
@@ -107,6 +99,25 @@ table th {
   border: 1px solid #a0787c;
 }
 
-/* .category-container {
-margin
-} */
+.bs {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px 20px;
+  background-color: #fde6e8ff;
+}
+
+.card-strip {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #fde6e8ff;
+  padding: 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.text-bg-colour {
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: rgb(255, 246, 247);
+  padding: 10px;
+}

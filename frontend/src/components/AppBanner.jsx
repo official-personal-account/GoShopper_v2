@@ -10,13 +10,13 @@ const AppBanner = () => {
       }}
     >
       <p style={{ fontSize: "small", color: "white" }}>
-        Want to learn more about Proshopper?{" "}
         <Link
           to="/info"
           style={{ color: "white", textDecorationColor: "white" }}
         >
           See here
-        </Link>
+        </Link>{" "}
+        for test user login & password
       </p>
     </div>
   );

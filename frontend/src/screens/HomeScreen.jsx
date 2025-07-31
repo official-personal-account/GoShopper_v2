@@ -53,7 +53,7 @@ const HomeScreen = () => {
         <>
           <Meta />
           <ProductCategory />
-          <h1>Latest Products</h1>
+          <h4 style={{ marginTop: "20px" }}>Latest Products</h4>
           <Row>
             {data.products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={3}>

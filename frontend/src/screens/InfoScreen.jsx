@@ -5,14 +5,14 @@ const InfoScreen = () => {
   return (
     <>
       <Link className="btn btn-secondary my-3" to={"/"}>
-        View Proshopper
+        View Goshopper
       </Link>
       <Row>
         <Col md={6}>
           <Card className="p-4 m-3">
-            <h2>Why Proshopper?</h2>
+            <h2>Why Goshopper?</h2>
             <p>
-              Proshopper is an ecommerce application (website) that can be
+              Goshopper is an ecommerce application (website) that can be
               deployed for food, clothing & product vendors looking to have
               their own ecommerce website:
             </p>
@@ -52,22 +52,21 @@ const InfoScreen = () => {
             <br />
             <h5>If you are a small business owner</h5>
             <p>
-              Proshopper saves you time, and allows you to focus on other
-              things, whiles still selling. On Proshopper, every product has the
-              relevant product info. Proshopper itself, guides the user through
-              each stage of the order process. As a result, there is minimal
-              interaction between you and the customer, before or during the
-              order process, allowing you some free time to engage in other
-              things.
+              Goshopper saves you time, and allows you to focus on other things,
+              whiles still selling. On Goshopper, every product has the relevant
+              product info. Goshopper itself, guides the user through each stage
+              of the order process. As a result, there is minimal interaction
+              between you and the customer, before or during the order process,
+              allowing you some free time to engage in other things.
             </p>
           </Card>
         </Col>
         <Col md={6}>
           <Card className="p-4 m-3">
-            <h5>Testing & Exploring Proshopper</h5>
+            <h5>Testing & Exploring Goshopper</h5>
             <p>
               Use any of the credentials below to sign in & explore how the
-              system works, where sign-in is required.
+              system works.
               <br />
               <strong>Ordinary user:</strong>
               <br />

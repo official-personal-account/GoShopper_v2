@@ -35,7 +35,7 @@ const UserListScreen = () => {
 
   return (
     <>
-      <h1>User List</h1>
+      <h4>User List</h4>
       {loadingDelete && <Loader />}
       {isLoading ? (
         <Loader />

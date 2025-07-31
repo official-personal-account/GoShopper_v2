@@ -62,13 +62,12 @@ const ProfileScreen = () => {
   return (
     <Row>
       <Col md={3}>
-        <h2>User Profile</h2>
-        <p style={{ fontSize: "small", color: "blue" }}>
-          To update any aspect of your profile, type the new detail in the
-          appropriate field. Then click "SAVE".
+        <h4>User Profile</h4>
+        <p style={{ fontSize: "x-small", color: "blue" }}>
+          Enter the new detail in the relevant field, then click "UPDATE".
         </p>
 
-        <Form onSubmit={submitHandler}>
+        <Form onSubmit={submitHandler} className="bs">
           <Form.Group controlId="name" className="my-2">
             <Form.Label>Name</Form.Label>
             <Form.Control
@@ -120,14 +119,14 @@ const ProfileScreen = () => {
           </Form.Group>
 
           <Button type="submit" variant="primary" className="my-2">
-            SAVE
+            UPDATE
           </Button>
           {loadingUpdateProfile && <Loader />}
         </Form>
       </Col>
 
       <Col md={9}>
-        <h2>My Order(s)</h2>
+        <h4>My Order(s)</h4>
         {isLoading ? (
           <Loader />
         ) : error ? (

@@ -1,5 +1,13 @@
 import { useParams } from "react-router-dom";
-import { Row, Col, ListGroup, Image, Button, Card } from "react-bootstrap";
+import {
+  Row,
+  Col,
+  ListGroup,
+  Image,
+  Button,
+  Badge,
+  Card,
+} from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
@@ -175,10 +183,14 @@ const OrderScreen = () => {
         <Col md={8}>
           <ListGroup variant="flush">
             <ListGroup.Item>
-              <h2>Order ID: {order._id}</h2>
+              <h4>
+                <Badge pill bg="success">
+                  Order ID: {order._id}
+                </Badge>
+              </h4>
             </ListGroup.Item>
-            <ListGroup.Item>
-              <h2>Shipping/Delivery</h2>
+            <ListGroup.Item className="text-bg-colour">
+              <h4>Shipping/Delivery</h4>
               <p>
                 <strong>Name: </strong>
                 {order.user.name}
@@ -207,8 +219,8 @@ const OrderScreen = () => {
               )}
             </ListGroup.Item>
 
-            <ListGroup.Item>
-              <h2>Payment Method</h2>
+            <ListGroup.Item className="text-bg-colour">
+              <h4>Payment Method</h4>
               <p>
                 <strong>Method: </strong>
                 {order.paymentMethod}
@@ -222,9 +234,9 @@ const OrderScreen = () => {
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Order Item(s)</h2>
+              <h4>Order Item(s)</h4>
               {order.orderItems.map((orderItem, index) => (
-                <ListGroup.Item key={index}>
+                <ListGroup.Item key={index} className="card-strip">
                   <Row>
                     <Col xs={3} sm={2}>
                       <Image
@@ -261,7 +273,7 @@ const OrderScreen = () => {
           <Card>
             <ListGroup variant="flush">
               <ListGroup.Item>
-                <h2>Order Summary</h2>
+                <h4>Order Summary</h4>
               </ListGroup.Item>
 
               <ListGroup.Item>

@@ -50,9 +50,9 @@ const RegisterScreen = () => {
 
   return (
     <FormContainer>
-      <h1>Register</h1>
+      <h4>Register</h4>
 
-      <Form onSubmit={submitHandler}>
+      <Form onSubmit={submitHandler} className="bs">
         <Form.Group controlId="name" className="my-3">
           <Form.Label>Name</Form.Label>
           <Form.Control

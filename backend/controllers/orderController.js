@@ -250,7 +250,7 @@ const initializeTrans = asyncHandler(async function (req, res) {
   if (order) {
     const email = order.user.email;
     const amount = Math.trunc(order.totalPrice * 100); // passes amount to paystack initialize function without decimals, if any
-    const callback_url = "https://proshopper.onrender.com/thankyou";
+    const callback_url = "https://goshopper.onrender.com/thankyou";
 
     const channels = ["card", "mobile_money"];
 
