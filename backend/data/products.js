@@ -25,7 +25,7 @@ const products = [
   },
   {
     name: "Wireless Keyboard",
-    image: "/images/wireless-keyboard.png",
+    image: "/images/wireless_keyboard.png",
     description: "Comes with a free mouse + bluetooth device",
     brand: "hp",
     category: "electronics",
