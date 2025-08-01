@@ -10,13 +10,13 @@ const AppBanner = () => {
       }}
     >
       <p style={{ fontSize: "small", color: "white" }}>
+        Customisable to your needs. See {""}
         <Link
           to="/info"
           style={{ color: "white", textDecorationColor: "white" }}
         >
-          See here
-        </Link>{" "}
-        for test user login & password
+          test user credentials
+        </Link>
       </p>
     </div>
   );
