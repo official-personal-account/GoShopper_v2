@@ -11,7 +11,7 @@ const OrderOnWhatsAppScreen = () => {
       <p style={{}}>
         <strong>2. </strong>
         Click{" "}
-        <a href="http://wa.me/233272083116" target="__blank">
+        <a href="http://wa.me/233203401562" target="__blank">
           order on WhatsApp
         </a>{" "}
         to complete your order.

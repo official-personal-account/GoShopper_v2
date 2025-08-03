@@ -11,7 +11,8 @@ main {
 }
 
 .rating svg {
-  color: #f8e825;
+  /* color: #f8e825; */
+  color: #a0787c;
 }
 
 .rating-text {
