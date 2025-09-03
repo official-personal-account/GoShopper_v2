@@ -115,8 +115,8 @@ const RegisterScreen = () => {
         {isLoading && <Loader />}
       </Form>
 
-      <Row className="py-3">
-        <Col>
+      <Row className="py-3 ">
+        <Col className="sm-text">
           Already have an account?{" "}
           <Link to={redirect ? `/login?redirect=${redirect}` : "/login"}>
             Sign In

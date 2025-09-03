@@ -73,20 +73,20 @@ const LoginScreen = () => {
         {isLoading && <Loader />}
       </Form>
       <Row className="py-3">
-        <Col>
+        <Col className="sm-text">
           New Customer?{" "}
           <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
             Register
           </Link>
         </Col>
-        <Col style={{}}>
+        <Col className="sm-text" style={{ textAlign: "right" }}>
           <Link to="/order-on-whatsapp">Continue on WhatsApp</Link>
         </Col>
       </Row>
 
       <hr />
 
-      <Row className="pt-3">
+      <Row className="pt-3 test-credentials">
         <h6>TEST USER CREDENTIALS</h6>
         <Col>
           <p>

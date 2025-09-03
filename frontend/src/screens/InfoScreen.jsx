@@ -9,7 +9,7 @@ const InfoScreen = () => {
         View Goshopper
       </Link>
       <Row>
-        <Col>
+        <Col md={6}>
           <h2>Why Goshopper?</h2>
           <p>
             Goshopper is an ecommerce application (website) that can be deployed
@@ -54,7 +54,7 @@ const InfoScreen = () => {
 
           <br />
         </Col>
-        <Col>
+        <Col md={6}>
           <h5>If you are a small business owner</h5>
           <p>
             Goshopper saves you time, and allows you to focus on other things,
