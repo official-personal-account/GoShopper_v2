@@ -10,12 +10,12 @@ const AppBanner = () => {
       }}
     >
       <p style={{ fontSize: "small", color: "white" }}>
-        Customisable to your needs. See {""}
+        Customisable to your needs. {""}
         <Link
           to="/info"
           style={{ color: "white", textDecorationColor: "white" }}
         >
-          test user credentials
+          Learn more about GoShopper.
         </Link>
       </p>
     </div>

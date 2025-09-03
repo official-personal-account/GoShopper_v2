@@ -79,7 +79,7 @@ const LoginScreen = () => {
             Register
           </Link>
         </Col>
-        <Col style={{ textAlign: "right" }}>
+        <Col style={{}}>
           <Link to="/order-on-whatsapp">Continue on WhatsApp</Link>
         </Col>
       </Row>
@@ -87,6 +87,7 @@ const LoginScreen = () => {
       <hr />
 
       <Row className="pt-3">
+        <h6>TEST USER CREDENTIALS</h6>
         <Col>
           <p>
             <strong>Customer: </strong>john@email.com
