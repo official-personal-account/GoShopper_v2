@@ -76,22 +76,32 @@ const LoginScreen = () => {
         <Col>
           New Customer?{" "}
           <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
-            Register Here
+            Register
           </Link>
         </Col>
+        <Col style={{ textAlign: "right" }}>
+          <Link to="/order-on-whatsapp">Continue on WhatsApp</Link>
+        </Col>
       </Row>
+
       <hr />
+
       <Row className="pt-3">
-        <p
-          style={{
-            fontSize: "small",
-            fontWeight: "bold",
-            letterSpacing: "1px",
-            textTransform: "uppercase",
-          }}
-        >
-          Or you can <Link to="/order-on-whatsapp">Order on WhatsApp</Link>
-        </p>
+        <Col>
+          <p>
+            <strong>Customer: </strong>john@email.com
+          </p>
+        </Col>
+        <Col>
+          <p>
+            <strong>Admin: </strong>admin@email.com
+          </p>
+        </Col>
+        <Col>
+          <p>
+            <strong>Password: </strong>testuser123
+          </p>
+        </Col>
       </Row>
     </FormContainer>
   );

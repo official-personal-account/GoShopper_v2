@@ -5,8 +5,7 @@ const OrderOnWhatsAppScreen = () => {
     <div>
       <h2>How to order on WhatsApp</h2>
       <p style={{}}>
-        <strong>1.</strong> Take a picture of the item(s), ensuring that the
-        item name can be seen in the picture.
+        <strong>1.</strong> Take a picture of the item(s).
       </p>
       <p style={{}}>
         <strong>2. </strong>
@@ -14,7 +13,7 @@ const OrderOnWhatsAppScreen = () => {
         <a href="http://wa.me/233203401562" target="__blank">
           order on WhatsApp
         </a>{" "}
-        to complete your order.
+        and send it to us.
       </p>
     </div>
   );
