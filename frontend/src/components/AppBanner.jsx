@@ -8,10 +8,11 @@ const AppBanner = () => {
         background: "rgba(255, 18, 18)",
         textAlign: "center",
         height: "25px",
+        padding: "2px",
       }}
     >
       <p style={{ fontSize: "small", color: "white" }}>
-        Customisable to your needs <LuDot /> Secured by Paystack
+        Customisable <LuDot /> Secured by Paystack
         <Link
           to="/info"
           style={{ color: "white", textDecorationColor: "white" }}
