@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { LuDot } from "react-icons/lu";
 
 const AppBanner = () => {
   return (
@@ -10,12 +11,13 @@ const AppBanner = () => {
       }}
     >
       <p style={{ fontSize: "small", color: "white" }}>
-        Customisable to your needs. {""}
+        Customisable to your needs <LuDot /> Secured by Paystack
         <Link
           to="/info"
           style={{ color: "white", textDecorationColor: "white" }}
         >
-          Learn more about GoShopper.
+          <LuDot />
+          Learn more
         </Link>
       </p>
     </div>

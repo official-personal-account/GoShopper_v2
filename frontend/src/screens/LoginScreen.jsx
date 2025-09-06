@@ -9,8 +9,8 @@ import { setCredentials } from "../slices/authSlice";
 import { toast } from "react-toastify";
 
 const LoginScreen = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("admin@email.com");
+  const [password, setPassword] = useState("testuser123");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -86,24 +86,33 @@ const LoginScreen = () => {
 
       <hr />
 
-      <Row className="pt-3 test-credentials">
-        <h6>TEST USER CREDENTIALS</h6>
-        <Col>
-          <p>
-            <strong>Customer: </strong>john@email.com
-          </p>
-        </Col>
-        <Col>
-          <p>
-            <strong>Admin: </strong>admin@email.com
-          </p>
-        </Col>
-        <Col>
-          <p>
-            <strong>Password: </strong>testuser123
-          </p>
-        </Col>
-      </Row>
+      <div className="test-credentials">
+        <h6>TEST USER? SIGN IN AS</h6>
+        <Button
+          type="button"
+          variant="success"
+          style={{ border: "1px solid green" }}
+          className="btn-sm me-2"
+          onClick={() => {
+            setEmail("customer@email.com");
+            setPassword("testuser123");
+          }}
+        >
+          Customer
+        </Button>
+        <Button
+          type="button"
+          variant="success"
+          style={{ border: "1px solid green" }}
+          className="btn-sm me-2"
+          onClick={() => {
+            setEmail("admin@email.com");
+            setPassword("testuser123");
+          }}
+        >
+          Admin
+        </Button>
+      </div>
     </FormContainer>
   );
 };
