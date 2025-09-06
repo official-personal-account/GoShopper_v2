@@ -33,29 +33,29 @@ const ProductCarousel = () => {
   // const { data: products, isLoading, error } = useGetTopProductsQuery();
 
   return (
-    <Carousel pause="hover" className="bg-primary mb-5">
+    <Carousel pause="hover" className=" mb-5">
+      <Carousel.Item>
+        <Image src="/images/carousel/4.png" alt="" />
+        {/* <Carousel.Caption>
+          <h3>50% Discount Sale</h3>
+          <p>Enjoy a discount on all sales this month!</p>
+        </Carousel.Caption> */}
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <Image src="/images/carousel/5a.png" alt="" />
+        {/* <Carousel.Caption>
+          <h3>50% Discount Sale</h3>
+          <p>Enjoy a discount on all sales this month!</p>
+        </Carousel.Caption> */}
+      </Carousel.Item>
+
       <Carousel.Item>
         <Image src="/images/carousel/1.png" alt="" />
-        <Carousel.Caption>
+        {/* <Carousel.Caption>
           <h3>50% Discount Sale</h3>
           <p>Enjoy a discount on all sales this month!</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-
-      <Carousel.Item>
-        <Image src="/images/carousel/2.png" alt="" />
-        <Carousel.Caption>
-          <h3>50% Discount Sale</h3>
-          <p>Enjoy a discount on all sales this month!</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-
-      <Carousel.Item>
-        <Image src="/images/carousel/3.png" alt="" />
-        <Carousel.Caption>
-          <h3>50% Discount Sale</h3>
-          <p>Enjoy a discount on all sales this month!</p>
-        </Carousel.Caption>
+        </Carousel.Caption> */}
       </Carousel.Item>
     </Carousel>
   );
