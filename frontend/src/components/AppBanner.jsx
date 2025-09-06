@@ -12,7 +12,7 @@ const AppBanner = () => {
       }}
     >
       <p style={{ fontSize: "small", color: "white" }}>
-        Customisable <LuDot /> Secured by Paystack
+        Customisable <LuDot /> Easy to use
         <Link
           to="/info"
           style={{ color: "white", textDecorationColor: "white" }}

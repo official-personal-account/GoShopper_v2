@@ -10,7 +10,7 @@ const Footer = () => {
           <Col className="text-center py-3">
             <p>GoShopper &copy; {currentYear}</p>
             <p style={{ color: "", fontSize: "small" }}>
-              Customizable to your needs{" "}
+              Customisable to your needs{" "}
             </p>
           </Col>
         </Row>

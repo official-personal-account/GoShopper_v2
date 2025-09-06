@@ -1,5 +1,5 @@
 // THE ERROR HANDLER FUNCTION - vid25 mern-ecommerce
-// When we call a mongoose method and there is an error, the error is returned to us in the form of an html page. These functions below helps us overwrite & customize the default error message to our own. We can do without these functions
+// When we call a mongoose method and there is an error, the error is returned to us in the form of an html page. These functions below helps us overwrite & customise the default error message to our own. We can do without these functions
 
 // addresses a situation where an item is not found
 const notFound = (req, res, next) => {
@@ -8,7 +8,7 @@ const notFound = (req, res, next) => {
   next(error);
 };
 
-// customize the stack error from mongoose
+// customise the stack error from mongoose
 const errorHandler = (err, req, res, next) => {
   let statusCode = res.statusCode === 200 ? 500 : res.statusCode;
   let message = err.message;
