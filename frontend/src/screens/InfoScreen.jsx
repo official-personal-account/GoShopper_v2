@@ -18,27 +18,26 @@ const InfoScreen = () => {
           </p>
           <p>
             <span style={{}}>
-              <GrStatusGood style={{ color: "green" }} /> Allows customers to
-              order & pay with mobile money or card, or select a
-              cash-on-delivery payment option.
+              <GrStatusGood style={{ color: "green" }} /> Mobile money, card,
+              and cash-on-delivery payment option.
             </span>
             <br />
             <span style={{}}>
-              <GrStatusGood style={{ color: "green" }} /> Payment secured by{" "}
+              <GrStatusGood style={{ color: "green" }} /> Payment secured by
+              Paystack.{" "}
               <a href="https://paystack.com" target="__blank">
                 Paystack
-              </a>
-              , a leading fintech in Africa & a subsidiary of{" "}
+              </a>{" "}
+              a leading fintech in Africa & a subsidiary of{" "}
               <a href="https://stripe.com" target="__blank">
                 Stripe
               </a>{" "}
-              (a Global fintech used by Amazon, Google, WhatsApp, Marriot &
-              more).
+              (a Global fintech used by Amazon, Google, Marriot & more).
             </span>
             <br />
             <span style={{}}>
-              <GrStatusGood style={{ color: "green" }} /> You get an instant
-              notification when payment is made.
+              <GrStatusGood style={{ color: "green" }} /> Instant payment
+              notification.
             </span>
             <br />
             <span style={{}}>
