@@ -24,16 +24,16 @@ const InfoScreen = () => {
             </span>
             <br />
             <span style={{}}>
-              <GrStatusGood style={{ color: "green" }} /> Secured by{" "}
+              <GrStatusGood style={{ color: "green" }} /> Payment secured by{" "}
               <a href="https://paystack.com" target="__blank">
                 Paystack
               </a>
-              , one of Africa's leading fintech and a subsidiary of{" "}
+              , a leading fintech in Africa & a subsidiary of{" "}
               <a href="https://stripe.com" target="__blank">
                 Stripe
               </a>{" "}
-              (a leading Global fintech used by Amazon, Google, WhatsApp,
-              Marriot & more).
+              (a Global fintech used by Amazon, Google, WhatsApp, Marriot &
+              more).
             </span>
             <br />
             <span style={{}}>

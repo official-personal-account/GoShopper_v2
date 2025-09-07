@@ -33,7 +33,7 @@ const OrderScreen = () => {
     error,
   } = useGetOrderDetailsQuery(orderId);
 
-  console.log(order);
+  // console.log(order);
 
   // NOTE: FOR BACKEND PAYSTACK
   // const {
