@@ -33,7 +33,7 @@ const OrderScreen = () => {
     error,
   } = useGetOrderDetailsQuery(orderId);
 
-  console.log(order.shippingAddress);
+  console.log(order);
 
   // NOTE: FOR BACKEND PAYSTACK
   // const {
@@ -203,8 +203,8 @@ const OrderScreen = () => {
               </p>
               <p>
                 <strong>Address:</strong> {order.shippingAddress.address},{" "}
-                {order.shippingAddress.area}, {order.shippingAddress.city}
-                {order.shippingAddress.State},{" "}
+                {order.shippingAddress.area}, {order.shippingAddress.city},{" "}
+                {order.shippingAddress.state},{" "}
                 {order.shippingAddress.postalCode},{" "}
                 {order.shippingAddress.country}
               </p>
