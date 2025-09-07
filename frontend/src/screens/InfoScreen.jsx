@@ -23,12 +23,11 @@ const InfoScreen = () => {
             </span>
             <br />
             <span style={{}}>
-              <GrStatusGood style={{ color: "green" }} /> Payment secured by
-              Paystack.{" "}
+              <GrStatusGood style={{ color: "green" }} /> Payment secured by{" "}
               <a href="https://paystack.com" target="__blank">
                 Paystack
-              </a>{" "}
-              a leading fintech in Africa & a subsidiary of{" "}
+              </a>
+              , a leading fintech in Africa & a subsidiary of{" "}
               <a href="https://stripe.com" target="__blank">
                 Stripe
               </a>{" "}
