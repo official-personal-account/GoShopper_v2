@@ -95,14 +95,7 @@ const PlaceOrderScreen = () => {
               ) : (
                 <ListGroup variant="flush">
                   {cart.cartItems.map((item, index) => (
-                    <ListGroup.Item
-                      key={index}
-                      style={{
-                        borderRadius: "5px",
-                        marginBottom: "5px",
-                        backgroundColor: "#fde6e8ff",
-                      }}
-                    >
+                    <ListGroup.Item key={index} className="card-strip">
                       <Row>
                         <Col xs={2} sm={2} md={1}>
                           <Image

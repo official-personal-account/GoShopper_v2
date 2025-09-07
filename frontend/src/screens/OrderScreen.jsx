@@ -184,9 +184,7 @@ const OrderScreen = () => {
           <ListGroup variant="flush">
             <ListGroup.Item>
               <h4>
-                <Badge pill bg="success">
-                  Order ID: {order._id}
-                </Badge>
+                <Badge bg="primary">Order ID: {order._id}</Badge>
               </h4>
             </ListGroup.Item>
             <ListGroup.Item className="text-bg-colour">

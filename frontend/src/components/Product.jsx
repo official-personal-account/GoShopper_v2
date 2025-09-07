@@ -24,7 +24,7 @@ const Product = ({ product }) => {
 
         <Row>
           <Col>
-            <Card.Text as="h3">₵{product.price}</Card.Text>
+            <Card.Text as="h4">₵{product.price}</Card.Text>
           </Col>
           <Col className="text-end">
             <Link to={`/product/${product._id}`}>
