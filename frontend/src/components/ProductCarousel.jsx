@@ -43,7 +43,7 @@ const ProductCarousel = () => {
       </Carousel.Item>
 
       <Carousel.Item>
-        <Image src="/images/carousel/5a.png" alt="" />
+        <Image src="/images/carousel/5b.png" alt="" />
         {/* <Carousel.Caption>
           <h3>50% Discount Sale</h3>
           <p>Enjoy a discount on all sales this month!</p>
