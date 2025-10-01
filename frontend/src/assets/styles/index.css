@@ -2,6 +2,18 @@
   background-color: rgb(54, 54, 54);
 } */
 
+@keyframes twinkle {
+  0% {
+    opacity: 0.5; /* Start slightly visible */
+  }
+  50% {
+    opacity: 1; /* Become fully visible */
+  }
+  100% {
+    opacity: 0.5; /* Fade back to slightly visible */
+  }
+}
+
 main {
   min-height: 80vh;
 }
@@ -126,4 +138,8 @@ table th {
 
 .test-credentials * {
   font-size: small;
+}
+
+.twinkling-element {
+  animation: twinkle 2s ease-in-out infinite alternate;
 }
