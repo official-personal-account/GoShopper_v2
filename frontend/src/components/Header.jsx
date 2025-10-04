@@ -20,8 +20,8 @@ const Header = () => {
 
   const logoutHandler = async () => {
     try {
-      await logoutApiCall().unwrap();
-      dispatch(logout()); // destroy cookie on backend server & clear localStorage
+      await logoutApiCall().unwrap(); // backend server: destroy cookie on backend server
+      dispatch(logout()); // frontend: clear localStorage & clear userInfo from redux state
       dispatch(resetCart()); // clear cart from redux store
       navigate("/login");
     } catch (err) {
