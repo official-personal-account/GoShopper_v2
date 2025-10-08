@@ -35,7 +35,7 @@ const ProductCarousel = () => {
   return (
     <Carousel pause="hover" className=" mb-5">
       <Carousel.Item>
-        <Image src="/images/carousel/1.png" alt="" />
+        <Image className="img-fluid" src="/images/carousel/1.png" alt="" />
         {/* <Carousel.Caption>
           <h3>50% Discount Sale</h3>
           <p>Enjoy a discount on all sales this month!</p>
@@ -43,7 +43,7 @@ const ProductCarousel = () => {
       </Carousel.Item>
 
       <Carousel.Item>
-        <Image src="/images/carousel/2.png" alt="" />
+        <Image className="img-fluid" src="/images/carousel/2.png" alt="" />
         {/* <Carousel.Caption>
           <h3>50% Discount Sale</h3>
           <p>Enjoy a discount on all sales this month!</p>
@@ -51,7 +51,7 @@ const ProductCarousel = () => {
       </Carousel.Item>
 
       <Carousel.Item>
-        <Image src="/images/carousel/3.png" alt="" />
+        <Image className="img-fluid" src="/images/carousel/3.png" alt="" />
         {/* <Carousel.Caption>
           <h3>50% Discount Sale</h3>
           <p>Enjoy a discount on all sales this month!</p>
